@@ -97,7 +97,7 @@ Inside the <code>config.json</code> in the default folder you will find the bot'
 
 * Twitter: [@nerfsleepysam](https://twitter.com/nerfsleepysam)
 * Twitter: [@pescadordcaxias](https://twitter.com/pescadordcaxias)
-* Twitter: [@MontadorO]("https://twitter.com/MontadorO")
+* Twitter: [@MontadorO]("https://twitter.com/MontadorO)
 * Github: [@Samuelkinson](https://github.com/Samuelkinson)
 
 ## 📝License
