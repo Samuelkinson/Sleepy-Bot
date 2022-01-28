@@ -1,0 +1,19 @@
+{
+    
+    "Module Exports  command": {
+    "prefix": "Discord Module Exports Command",
+    "body": [
+        "module.exports = {",
+            "\tname: '' ,",
+            "\taliases: [],",
+            "\tpermissions: [],",
+            "\tcooldown: 0,",
+            "\tdescription: '',",
+            "\texecute(Client, msg, args, Discord) {",
+            "\t}",
+            "}",
+        ],
+    "description": "Discord Default Module Exports Template"
+
+}
+}
