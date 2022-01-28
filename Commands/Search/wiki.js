@@ -1,7 +1,7 @@
 const {Wikipedia} = require("ultrax")
 module.exports = {
     name: 'wiki' ,
-    aliases: [],
+    aliases: ['wikipedia'],
     permissions: [],
     cooldown: 0,
     description: '',
