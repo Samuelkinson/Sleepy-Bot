@@ -10,6 +10,7 @@ const HelpFun = require('../../Embeds/Help/HelpFun');
 const HelpUtility = require('../../Embeds/Help/HelpUtility');
 const HelpVoice = require('../../Embeds/Help/HelpVoice');
 const HelpSearch = require('../../Embeds/Help/HelpSearch')
+
 module.exports = {
     name: 'help',
     aliases: ['socorro', 'h', 'ebook', 'ajuda'],
