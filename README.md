@@ -17,7 +17,7 @@
 <h1 align="center"> Sleepy Bot </h1> <br>
 <p align="center">
   <a href="https://discord.com/api/oauth2/authorize?client_id=863936621656932372&permissions=8&scope=bot">
-    <img alt="GitPoint" title="GitPoint" src="https://i.pinimg.com/originals/57/f7/3c/57f73c7a5f8d65a6f2598b0f609df675.jpg" width="450">
+    <img alt="Sleepy Bot" title="Sleepy Bot" src="https://i.pinimg.com/originals/57/f7/3c/57f73c7a5f8d65a6f2598b0f609df675.jpg" width="450">
   </a>
 </p>
 
@@ -97,7 +97,7 @@ Inside the <code>config.json</code> in the default folder you will find the bot'
 
 * Twitter: [@nerfsleepysam](https://twitter.com/nerfsleepysam)
 * Twitter: [@pescadordcaxias](https://twitter.com/pescadordcaxias)
-* Twitter: [@MontadorO]("https://twitter.com/MontadorO")
+* Twitter: [@MontadorO](https://twitter.com/MontadorO)
 * Github: [@Samuelkinson](https://github.com/Samuelkinson)
 
 ## 📝License
