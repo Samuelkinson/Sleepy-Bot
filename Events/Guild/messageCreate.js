@@ -26,7 +26,6 @@ module.exports = async (Discord, Client, msg) =>{
     // Invalid Command handler
     if(!command) return CommandNotFound(msg, Discord, Client, prefix)
     
-
     //Cooldown System
     if(!cooldowns.has(command.name)){
         cooldowns.set(command.name, new Discord.Collection());
@@ -49,7 +48,7 @@ module.exports = async (Discord, Client, msg) =>{
 
     time_stamps.set(msg.author.id, current_time);
     setTimeout(() => time_stamps.delete(msg.author.id), cooldown_amount);
-
+    
 
     // Permissions System  
     const validPermissions = [  //Array of premissions
@@ -103,6 +102,6 @@ module.exports = async (Discord, Client, msg) =>{
     
 
     //Executes Valid Command
-    if(command) command.execute(Client, msg, args, Discord)
+    if(command) command.execute(Client, msg, args, Discord, cmd)
 
 }
