@@ -86,6 +86,7 @@ Run <code>npm</code> install in the bot directory and make sure you get no error
 Inside the <code>config.json</code> in the default folder you will find the bot's default [prefix](https://twitter.com/nerfsleepysam/status/1487151670245085184) as well as the <code>keys</code>get those secrets in there.
 * <code>[Weather](https://openweathermap.org/api)</code> 
 * <code>[Covid-19](https://rapidapi.com/api-sports/api/covid-193)</code>
+* <code>[Osu!](https://osu.ppy.sh/p/api)</code>
 <br>The name of the fields inside the DB are according to the schemas inside the <code>Schemas</code> folder this way you don't have to setup anything inside mongo besides the connection string. 
 <br>At the end run npm start and enjoy Sleepy Bot😴💤!
 
