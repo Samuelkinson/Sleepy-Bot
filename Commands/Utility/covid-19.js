@@ -33,7 +33,7 @@ module.exports = {
 				let c = response.data.response[0];
 				let country = c.country.replace(/-/g, ' ');
 				let flag = `\:flag_${lookup(c.country).toLowerCase()}:`;
-
+        
         covid19(Discord, msg, c, country, flag ) //COVID-19 Country Embed
          
 			} else msg.channel.send('Não encontrei esse país');
