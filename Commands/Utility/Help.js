@@ -15,14 +15,11 @@ module.exports = {
     name: 'help',
     aliases: ['socorro', 'h', 'ebook', 'ajuda'],
     permissions: ['SEND_MESSAGES'],
-    cooldown: 2,
+    cooldown: 20,
     description: `Help command | ${DefaultPrefix}help [CommandName] or [Category]`,
     async execute(Client, msg, args, Discord) {
 
-        
-
             let Prefix;
-
             let data = await GuildSchema.findOne({ GuildID: msg.guild.id })
             if (data) Prefix = data.prefix
             else Prefix = DefaultPrefix

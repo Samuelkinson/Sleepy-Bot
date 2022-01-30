@@ -58,7 +58,7 @@ module.exports = async (Discord, Client, msg, categories, Prefix) => {
     
 
     const emojiList = ["⏪", "⏩"];
-    const timeout = '600000'
+    const timeout = '19000'
     buttonsPagination(msg, pages, emojiList, timeout)
 
 }
