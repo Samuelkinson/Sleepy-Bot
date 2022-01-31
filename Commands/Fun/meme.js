@@ -19,7 +19,9 @@ module.exports = {
                         {name: 'Pediu o meme:', value: `${msg.author.tag}`, inline: true}, 
                         {name: 'Link:', value: `${json.postLink}`, inline: true},
                         )
-                    .setFooter(`Subreddit r/${json.subreddit} `)
+                    .setFooter({
+                        text:`Subreddit r/${json.subreddit} `
+                    })
 
                  let message = await msg.channel.send(`A procura de um meme...`)
                  message.edit({embeds:[memeEmbed]}).then(msg.delete());

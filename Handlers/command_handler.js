@@ -12,7 +12,8 @@ module.exports = (Client, Discord) =>{
                 Client.commands.set(command.name ,command)
             }else{
                 continue;
-            }
+            } 
+        
         }
         
     }

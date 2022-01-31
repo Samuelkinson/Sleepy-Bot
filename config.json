@@ -1,6 +1,6 @@
 {
     "prefix": "?",
-    "weatherkey": "key",
-    "covidapikey": "key",
-    "osuapikey": "key"
+    "weatherkey": "cf55b98f0480e497f26473ded1af6d33",
+    "covidapikey": "5e21e0724cmsh7d777fca0033c58p1d0477jsn3efbcc5d4a4d",
+    "osuapikey": "bc0d59900eadc049ba2dda47b868c58d610f12c2"
 }

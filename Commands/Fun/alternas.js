@@ -22,7 +22,10 @@ module.exports = {
             .setTitle('Alternas são a minha vida!')
             .setImage(`${alternas1}`)
             .setColor(`#ff748c`)
-            .setFooter(`I love alternas`,  Client.user.displayAvatarURL({dynamic: true, format :'png'}))
+            .setFooter({
+                text:`I love alternas`,  
+                iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
+            })
         msg.channel.send({embeds:[embed]})
 
     }

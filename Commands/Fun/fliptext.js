@@ -11,14 +11,11 @@ module.exports = {
         if(!args[0]) return msg.reply('Preciso de texto')
 
         var flipped = [];
-  
         args.forEach((arg) => {
             flipped.push(flip(arg));
-        });
-        
-       
+        });    
+  
     await msg.channel.send(flipped.join(" "));
-
-        
+      
     }
 }

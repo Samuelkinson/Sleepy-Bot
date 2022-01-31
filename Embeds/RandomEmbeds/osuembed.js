@@ -1,3 +1,5 @@
+const { text } = require("cheerio/lib/api/manipulation")
+
 module.exports = (Client, msg, Discord, osuUser) =>{
 
     const embed = new Discord.MessageEmbed()
@@ -29,6 +31,9 @@ module.exports = (Client, msg, Discord, osuUser) =>{
         **SH:** ${osuUser.counts.SH}
         **S:** ${osuUser.counts.S}
         **A:** ${osuUser.counts.A}`, false)
-        .setFooter(`Click the circles😴💤`,  Client.user.displayAvatarURL({dynamic: true, format :'png'})) 
+        .setFooter({
+            text: `Click the circles😴💤`,  
+            URL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
+        }) 
     msg.channel.send({embeds:[embed]}) 
 }

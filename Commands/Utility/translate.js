@@ -22,7 +22,7 @@ module.exports = {
                 msg.channel.send(res)
             }).catch(err => {
                 msg.channel.send('An error has occured')
-                console.log(err)
+                
             })    
             
         }

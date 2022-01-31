@@ -18,7 +18,9 @@ module.exports = (Discord, msg, c, country, flag ) =>{
 			{name: 'Novas Mortes', value: formatNumber(c.deaths.new), inline: true},
 			{name: 'Total de Testes', value: formatNumber(c.tests.total), inline: true},
 		)			
-	.setFooter(`Última atualização: ${new Date(c.time).toISOString().substring(0, 10)}`)
+    .setFooter({
+        text:`Última atualização: ${new Date(c.time).toISOString().substring(0, 10)}`
+    })
 
     return msg.channel.send({embeds:[embed]})
 }

@@ -14,8 +14,13 @@ module.exports = {
     async execute(Client, msg, args, Discord) {
 
         const user = args.join(' ') 
-        const osuUser = await osu.getUser({ u: user })
-        osuembed(Client, msg, Discord, osuUser)
+        try {
+            const osuUser = await osu.getUser({ u: user })
+            osuembed(Client, msg, Discord, osuUser)
+        } catch (error) {
+            return msg.channel.send('Player not found')
+        }
+        
          
     }       
 }

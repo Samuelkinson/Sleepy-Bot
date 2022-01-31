@@ -15,7 +15,7 @@ module.exports = {
     name: 'help',
     aliases: ['socorro', 'h', 'ebook', 'ajuda'],
     permissions: ['SEND_MESSAGES'],
-    cooldown: 20,
+    cooldown: 2,
     description: `Help command | ${DefaultPrefix}help [CommandName] or [Category]`,
     async execute(Client, msg, args, Discord) {
 
@@ -53,11 +53,11 @@ module.exports = {
                 const command = Client.commands.get(cmd) || Client.commands.find(a => a.aliases && a.aliases.includes(cmd))
                 if (command) return CommandInfo(msg, Discord, command, Client)
 
-                if (cmd === 'admin' || cmd === 'a') return HelpAdmin(Discord, Client, msg, categories)
-                else if (cmd === 'fun' || cmd === 'f') return HelpFun(Discord, Client, msg, categories)
-                else if (cmd === 'utility' || cmd === 'u') return HelpUtility(Discord, Client, msg, categories)
-                else if (cmd === 'voice' || cmd === 'v') return HelpVoice(Discord, Client, msg, categories)
-                else if (cmd === 'search' || cmd === 's') return HelpSearch(Discord, Client, msg, categories)
+                if (cmd === 'admin' || cmd === 'a' || cmd === '5') return HelpAdmin(Discord, Client, msg, categories, Prefix)
+                else if (cmd === 'fun' || cmd === 'f' || cmd === '4') return HelpFun(Discord, Client, msg, categories, Prefix)
+                else if (cmd === 'utility' || cmd === 'u' || cmd === '2') return HelpUtility(Discord, Client, msg, categories, Prefix)
+                else if (cmd === 'voice' || cmd === 'v' || cmd === '3') return HelpVoice(Discord, Client, msg, categories, Prefix)
+                else if (cmd === 'search' || cmd === 's' || cmd === '6') return HelpSearch(Discord, Client, msg, categories, Prefix)
 
                 if (!command) return Nocommand(msg, Discord, Client, Prefix)
             }

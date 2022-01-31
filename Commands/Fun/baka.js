@@ -17,7 +17,9 @@ module.exports = {
       .setTitle("BAKA!!!")
       .setImage(response.body.url)
       .setColor(`#ff748c`)
-      .setFooter(`Weeb alert!`)
+      .setFooter({
+        text:`Weeb alert!`
+      })
       .setURL(response.body.url);
 
     msg.channel.send({embeds: [embed]}).then(msg.delete());
