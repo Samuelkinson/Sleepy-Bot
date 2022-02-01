@@ -8,13 +8,10 @@ module.exports = async (Discord, Client, msg, categories, Prefix) => {
         .addField('**Prefixo**', `Prefixo do bot é: \`${Prefix}\``)
         .addField('**Páginas**', `\`1.Informação do SleepyBot\` \n \`2.Utility\` \n \`3.Voz\` \n  \`4.Diversão\` \n \`5.Admin\` \n \`6.Procura\``)
         .addField('**Ajuda na Navegação**', `Use ${Prefix}h "page"`)
-        .setFooter('Usage Syntax: <required> [optional]')
         .setFooter({
             text:`Usage Syntax: <required> [optional]`
         })
 
     return msg.channel.send({ embeds: [HelpInfo] }).then(msg.delete());
     
-    
-
 }

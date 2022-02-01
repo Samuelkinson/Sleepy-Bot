@@ -1,6 +1,6 @@
 const ms = require('ms')
 const Prefix  = require('../../config.json').prefix
-const { StartTimer, EndTimer } = require('../../Embeds/RandomEmbeds/Timer')
+const { StartTimer, EndTimer } = require('../../Embeds/RandomEmbeds/Really_Random_Embeds/Timer')
 
 module.exports = {
     name: 'timer' ,

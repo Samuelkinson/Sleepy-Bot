@@ -33,7 +33,7 @@ module.exports = (Client, msg, Discord, osuUser) =>{
         **A:** ${osuUser.counts.A}`, false)
         .setFooter({
             text: `Click the circles😴💤`,  
-            URL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
+            iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
         }) 
     msg.channel.send({embeds:[embed]}) 
 }

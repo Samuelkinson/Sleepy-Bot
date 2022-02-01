@@ -1,5 +1,5 @@
 const nodeosu = require('node-osu')
-const osuembed = require('../../Embeds/RandomEmbeds/osuembed')
+const osuembed = require('../../Embeds/RandomEmbeds/Really_Random_Embeds/osuembed')
 const configosu = require('../../config.json').osuapikey
 const osu = new nodeosu.Api(configosu, { // Set your API Key in config.json
     resAsError: true // Reject on not found instead of returning nothing. (default: true)

@@ -21,7 +21,7 @@ module.exports = {
     description: 'Covid-19 country & LeaderBoard',
     async execute(Client, msg, args, Discord, cmd) {
 
-     //COVID-19 Country
+     
      if (!args[0]) {
       options.url = 'https://covid-193.p.rapidapi.com/statistics';
       delete options.params;

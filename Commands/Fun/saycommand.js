@@ -12,13 +12,14 @@ module.exports = {
         const messageToSay = args.join(" ")
         if(!messageToSay[0]) return  msg.channel.send({content:`Usa ${Prefix}echo "algo"`});
 
-        
         const sayEmbed = new Discord.MessageEmbed()
             .setColor('#ff748c') 
             .addFields(
                 {name: ` ${msg.author.tag} quer dizer:`, value: `${messageToSay}`, inline: true},
                 )
-            .setFooter(Client.user.tag, Client.user.displayAvatarURL({dynamic: true, format :'png'}))
+            .setFooter({
+                text:Client.user.username,  
+                iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})})
             msg.channel.send({embeds:[sayEmbed]}).then(msg.delete());
 
     }

@@ -9,8 +9,7 @@ module.exports = async (Client, msg, args, Discord, user) => {
      }
     //Lists
     const hacked = msg.mentions.users.first() 
-
-    const member = msg.mentions.members.first() //To get Thumbnail, if used "hacked" api bug
+    const member = msg.mentions.members.first() //To get Thumbnail
 
     const passlist =[
         "amo a minha familia 2020",

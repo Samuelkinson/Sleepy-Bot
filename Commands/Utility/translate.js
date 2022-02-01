@@ -1,6 +1,5 @@
 const translate = require('translate-google')
 const Prefix = require('../../config.json').prefix
-const language = require('../../Resources/langOptions.js');
 
 module.exports = {
     name: 'tt' ,

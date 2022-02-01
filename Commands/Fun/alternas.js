@@ -17,7 +17,7 @@ module.exports = {
             'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeVHf66zjj0hTKE2UKncQWYdYCMuBlLUJs-JGwYSxbinwiHUq2k8Kq4_Rr5myGMeeuk8w&usqp=CAU',
         ]
 
-     let alternas1 = (alternas[Math.floor(Math.random() * alternas.length)]);  
+      let alternas1 = (alternas[Math.floor(Math.random() * alternas.length)]);  
       let embed = new Discord.MessageEmbed()
             .setTitle('Alternas são a minha vida!')
             .setImage(`${alternas1}`)
