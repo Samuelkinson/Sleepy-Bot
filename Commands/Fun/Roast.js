@@ -1,6 +1,5 @@
 const roastEmbed = require('../../Embeds/RandomEmbeds/roastembed/RoastEmbed')
 const SelfroastEmbed = require('../../Embeds/RandomEmbeds/roastembed/SelfRoastEmbed')
-const fetch = require('node-fetch')
 
 module.exports = {
     name: 'piada' ,
@@ -13,20 +12,10 @@ module.exports = {
         if(args[0]){
             const mentionedMember = msg.mentions.users.first();
             if(!mentionedMember) return msg.channel.send({content: 'Não encontrei esse ser humano'})
-            if(mentionedMember){
-                fetch('https://evilinsult.com/generate_insult.php?lang=en&type=json')
-                    .then(res => res.json())
-                    .then(json => {           
-                    roastEmbed(Discord, Client, mentionedMember, json, msg)
-                    })
-            }   
-        } else {                   
-            const user = msg.author.username 
-            fetch('https://evilinsult.com/generate_insult.php?lang=en&type=json')
-                .then(res => res.json())
-                .then(json => {                             
-                    SelfroastEmbed(Client, msg, args, Discord, user, json)
-                })
-        }
-     }
+            roastEmbed(Discord, Client, mentionedMember, msg)
+        }                   
+        const user = msg.author.username 
+        SelfroastEmbed(Client, msg, Discord, user)
+    }
 }
+    

@@ -5,6 +5,7 @@ module.exports = {
     cooldown: 0,
     description: '',
     async execute(Client, msg, args, Discord) {
+        
     const embed = new Discord.MessageEmbed()
         .setAuthor(msg.guild.name, msg.guild.iconURL())
         .setColor("#a35ecc")

@@ -11,9 +11,8 @@ module.exports = {
     const user = msg.mentions.users.first();
 
     if(user == Client.users.cache.get(msg.author.id)){
-      return msg.channel.send("Escolhe outra pessoa, tu já estas!")
+      return msg.channel.send("Escolhe outra pessoa, tu já foste hackeado!")
     }
-
     if(!user){
         return msg.reply("Quem tenho de hackear?");
       }else{

@@ -19,11 +19,9 @@ module.exports = {
             const summary = await page.summary();
 
             if (summary.type === 'disambiguation' ){
-                
                 disambiguationembed(Client, msg, args, Discord, summary)
 
             }else{
-
                 standardembed(Client, msg, args, Discord, summary)
             }
         } catch (error) {

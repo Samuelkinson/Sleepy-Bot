@@ -11,6 +11,6 @@ module.exports = {
         if(!args[0]) return msg.reply('Preciso de texto')
         
         zalgotext = zalgo(args.join(" "))
-        msg.channel.send(zalgotext)
+        msg.channel.send(zalgotext).then(msg.delete())
     }
 }

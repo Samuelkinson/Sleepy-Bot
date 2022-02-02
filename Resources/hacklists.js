@@ -128,10 +128,10 @@ module.exports = async (Client, msg, args, Discord, user) => {
             {name: `🥉`, value: `${messagelist3}`, inline: false},
         )
         .setFooter({
-          text: Client.user.tag, 
+          text: `O hack foi terminado`,
         });
     const prompt = await msg.channel.send(`Hacking ${user ? hacked.username : hacked} agora...`);
-    
+
         await wait(2700);
         await prompt.edit('Encontrando login discord ...');
         await wait(2700);
@@ -154,9 +154,10 @@ module.exports = async (Client, msg, args, Discord, user) => {
         await prompt.edit('A encontrar as dms');
         await wait(1700);
         await prompt.edit('Listagem das mensages mais usadas...');
-        await wait(1000); 
-        await msg.channel.send({embeds: [embedmsglist]});
-        await prompt.edit(`${hacked.username} foi hackeado.`);
+        await wait(1000);  
+        await msg.channel.send({embeds: [embedmsglist]}).then(msg.delete());
+        await prompt.delete();
         await wait(4700); 
+        
     await prompt.delete
 }

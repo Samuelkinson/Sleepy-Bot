@@ -15,12 +15,9 @@ module.exports = {
         const sayEmbed = new Discord.MessageEmbed()
             .setColor('#ff748c') 
             .addFields(
-                {name: ` ${msg.author.tag} quer dizer:`, value: `${messageToSay}`, inline: true},
+                {name: `${msg.author.username}™ quer dizer:`, value: `${messageToSay}`, inline: true},
                 )
-            .setFooter({
-                text:Client.user.username,  
-                iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})})
-            msg.channel.send({embeds:[sayEmbed]}).then(msg.delete());
+        msg.channel.send({embeds:[sayEmbed]}).then(msg.delete());
 
     }
 }

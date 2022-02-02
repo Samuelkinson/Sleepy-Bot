@@ -13,7 +13,7 @@ module.exports = {
         
     const duration = moment.duration(Client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
         let embed = new Discord.MessageEmbed()
-            .setTitle("Uptime")
+            .setTitle("⏱Uptime")
             .setDescription(`${duration}`)
             .setColor('#ffc0cb')
 

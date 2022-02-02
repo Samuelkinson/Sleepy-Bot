@@ -9,7 +9,7 @@ module.exports = {
     async execute(Client, msg, args, Discord) {
 
         let embed = new Discord.MessageEmbed()
-        .setTitle("Resultados da procura do google")
+        .setTitle("Resultados da procura do google:")
         .setColor('#37dc0c')
         .setTimestamp()
         .setFooter({      
@@ -18,13 +18,14 @@ module.exports = {
 
     googleIt({
         query: args.join(' '),
-        disableConsole: true 
+        disableConsole: true,
+        limit: 5 
         }).then(results => {
-        results.forEach(function(item, index) { 
-            embed.addField((index + 1) + ": " + item.title, "<" + item.link + ">");
+        results.forEach(function(item, index) {
+        embed.addField((index + 1) + ": " + item.title,  item.link);
         });
         
-        msg.channel.send({embeds:[embed]})
+        msg.channel.send({embeds:[embed]}).then(msg.delete()) 
 
     }).catch(e => {
         console.warn("Error while attempting to search Google. " + e + " " + Date.now());

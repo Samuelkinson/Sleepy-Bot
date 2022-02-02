@@ -15,7 +15,7 @@ module.exports = {
         .end((err, response) => {
 
         let jEmbed = new Discord.MessageEmbed()
-        .setTitle("Piada de pai")
+        .setTitle("🧔Piada de pai")
         .setDescription(response.body.joke)
         .setColor("#ff748c");
         msg.channel.send(({embeds:[jEmbed]})).then(msg.delete());

@@ -1,5 +1,10 @@
-module.exports =(Client, msg, args, Discord, user, json) => {
+const fetch = require('node-fetch')
+
+module.exports =(Client, msg, Discord, user) => {
     
+    fetch('https://evilinsult.com/generate_insult.php?lang=en&type=json')
+    .then(res => res.json())
+    .then(json => {    
     let SeftRoastEmbed = new Discord.MessageEmbed()
         .setTitle(`\`${user}\` decidiu ser humilhado`)
         .setColor('#ff748c')
@@ -11,6 +16,5 @@ module.exports =(Client, msg, args, Discord, user, json) => {
         .setTimestamp()
 
     return msg.channel.send({embeds: [SeftRoastEmbed]})
-
-
+    })
 }

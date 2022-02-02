@@ -15,7 +15,7 @@ module.exports = {
             flipped.push(flip(arg));
         });    
   
-    await msg.channel.send(flipped.join(" "));
+        await msg.channel.send(flipped.join(" ")).then(msg.delete());
       
     }
 }

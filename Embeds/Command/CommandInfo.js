@@ -8,7 +8,9 @@ module.exports = (msg, Discord, command, Client) => {
             { name: '👑Permissões', value: !command.permissions.length ? `\`Este comando não necessita de permissões para ser usado\`` : `\`${command.permissions.join(', ')}\`` },
         )
         .setColor('GREEN')
-        .setFooter('Usage Syntax: <required> [optional]')
+        .setFooter({
+            text:'Usage Syntax: <required> [optional]'
+        })
         .setTimestamp()
 
     return msg.reply({ embeds: [embed] })

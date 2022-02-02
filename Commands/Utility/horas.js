@@ -12,8 +12,8 @@ module.exports = {
         let ano = hoje.toString().split(" ")[2]
         const embed = new Discord.MessageEmbed()
         .setColor("#a35ecc")
-        .addField("Hoje é:", `${Dia}` + ", " + `${mes}` + ", " + `${ano}`)
-        .addField("Tempo do dia:", `${hoje.toString().split(" ")[4]}`)
+        .addField("📣Hoje é:", `${Dia}` + ", " + `${mes}` + ", " + `${ano}`)
+        .addField("⌚Tempo do dia:", `${hoje.toString().split(" ")[4]}`)
         msg.channel.send({embeds: [embed]})  
     } 
 }

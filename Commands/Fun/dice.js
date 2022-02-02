@@ -11,11 +11,11 @@ module.exports = {
             return answers[Math.floor(Math.random()*answers.length)];
         }
           
-           var embed = new Discord.MessageEmbed()
-            .setDescription(":game_die: O dado rolou " + `${dice()}` + "! :game_die:")
-            .setColor("#ff748c")
+        var embed = new Discord.MessageEmbed()
+        .setDescription(":game_die: O dado rolou " + `${dice()}` + "! :game_die:")
+        .setColor("#ff748c")
           
-            return msg.channel.send({embeds: [embed]}).then(msg.delete());
+        return msg.channel.send({embeds: [embed]}).then(msg.delete());
         
         }
     }
