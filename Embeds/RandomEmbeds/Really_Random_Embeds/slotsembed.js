@@ -65,5 +65,5 @@ module.exports = (Client, msg, args, Discord) =>{
 	        .setColor("#ff748c")
 	        .setDescription(`**[ 🎰 ${msg.member} quer jogar slots! 🎰 ]**`)
 	        .addField(`${reponse} \n \n${reponse2}**<** \n \n${reponse3}`, `** **`)
-	    msg.channel.send({embeds:[embed]})
+	    msg.channel.send({embeds:[embed]}).then(msg.delete()) 
 }

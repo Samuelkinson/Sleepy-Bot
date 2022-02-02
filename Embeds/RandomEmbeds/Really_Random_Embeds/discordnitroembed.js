@@ -12,6 +12,6 @@ module.exports = (Client, msg, args, Discord) =>{
                 text:`Nunca te entregarei!`, 
                 iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
             })
-    msg.channel.send({embeds: [embed]})
+    msg.channel.send({embeds: [embed]}).then(msg.delete()) 
     
 }

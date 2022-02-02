@@ -16,6 +16,6 @@ module.exports = (Discord, msg, c ) =>{
         text:`Last Update: ${new Date().toISOString().substring(0, 10)}`
     })
 
-    msg.channel.send({embeds:[embed]})
+    msg.channel.send({embeds:[embed]}).then(msg.delete()) 
    
 }

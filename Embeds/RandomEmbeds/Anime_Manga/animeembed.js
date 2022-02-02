@@ -37,7 +37,7 @@ module.exports = (Client, msg, args, Discord) =>{
                     text:`Informações vindas de kitsu.io 😴 `,  
                     iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
                     }) 
-            msg.channel.send({embeds:[embed]})  
+            msg.channel.send({embeds:[embed]}).then(msg.delete())   
 
         }).catch(err => {
           return msg.channel.send(`Não encontrei: **${args.join(" ")}**!`)

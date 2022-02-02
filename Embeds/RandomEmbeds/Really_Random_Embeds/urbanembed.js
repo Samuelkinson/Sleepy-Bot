@@ -10,8 +10,7 @@ module.exports = (Client, msg, args, Discord, answer, trim)  => {
         .setTitle(answer.word)
         .setURL(answer.permalink)
         .addField('Definição', trim(answer.definition))
-        /* .addField('Exemplo', trim(answer.example)) */
-        /* .addField('Ratings')  */
+        .addField('Exemplo', trim(answer.example))  
         .addFields(
             {name: `Rating:`, value: `${answer.thumbs_up}👍`, inline: true},
             {name: `Rating:` , value: `${answer.thumbs_down}👎`, inline: true},
@@ -19,7 +18,7 @@ module.exports = (Client, msg, args, Discord, answer, trim)  => {
         .setFooter({
             text:`Usei o Urban Dictionary`, 
             iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})})
-        msg.channel.send({embeds:[embed]})
+        msg.channel.send({embeds:[embed]}).then(msg.delete()) 
 
     }catch(err) {
         msg.channel.send({content:`Não consegui encontrar`});

@@ -1,8 +1,9 @@
 const ytsr = require("ytsr")
+const youtubeembed = require('../../Embeds/RandomEmbeds/Really_Random_Embeds/youtubeembed')
 
 module.exports = {
     name: 'youtube' ,
-    aliases: ['ytsr', 'ytsearch'],
+    aliases: ['ytsr', 'ytsearch', 'yt'],
     permissions: [],
     cooldown: 0,
     description: '',
@@ -13,20 +14,10 @@ module.exports = {
 
         const res = await ytsr(query).catch(e => {
             return msg.channel.send('Sem resultados')
-        
         })
+
         const video = res.items.filter(i => i.type === "video")[0];
         if(!video) return msg.channel.send('Sem resultados')
-
-        let embed = new Discord.MessageEmbed()
-                .setColor('#37dc0c')
-                .setTitle(video.title)
-                .setImage(video.bestThumbnail.url)
-                .setAuthor(video.author.name)
-                .addField("Views", video.views.toLocaleString(), true)
-                .addField("Duração", video.duration, true)
-                .setDescription(video.url)
-                .setFooter(`Youtube Search!`,  Client.user.displayAvatarURL({dynamic: true, format :'png'}))
-                msg.channel.send({embeds:[embed]})
+        youtubeembed (Client, msg, args, Discord, video)
     }
 }

@@ -18,7 +18,7 @@ module.exports = {
 
     googleIt({
         query: args.join(' '),
-        disableConsole: true
+        disableConsole: true 
         }).then(results => {
         results.forEach(function(item, index) { 
             embed.addField((index + 1) + ": " + item.title, "<" + item.link + ">");

@@ -1,4 +1,8 @@
-const {Wikipedia} = require("ultrax")
+const { summary } = require('wikipedia');
+const wiki = require('wikipedia')
+const disambiguationembed = require('../../Embeds/RandomEmbeds/WikiEmbed/disambiguationembed')
+const standardembed = require('../../Embeds/RandomEmbeds/WikiEmbed/standardembed')
+
 module.exports = {
     name: 'wiki' ,
     aliases: ['wikipedia'],
@@ -7,16 +11,25 @@ module.exports = {
     description: '',
     async execute(Client, msg, args, Discord) {
 
-        let query = args.join("")
-        if(!query) return msg.channel.send("Preciso de palavras!")
+        let query = args.join(" ")
+        if(!query) return msg.channel.send("Preciso de palavras!") 
+       
+        try {
+            const page = await wiki.page(query);
+            const summary = await page.summary();
 
-        const res = new Wikipedia({
-            message: msg,
-            color: "#37dc0c",
-            query: query
-    })
+            if (summary.type === 'disambiguation' ){
+                
+                disambiguationembed(Client, msg, args, Discord, summary)
 
-    res.fetch()
+            }else{
+
+                standardembed(Client, msg, args, Discord, summary)
+            }
+        } catch (error) {
+            return msg.channel.send(`Couldn't find ${query}`)
+           
+        }
 
     }
 }

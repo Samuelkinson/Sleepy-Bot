@@ -40,7 +40,5 @@ module.exports = {
             msg.channel.send({embeds: [embed]})
         });
        
-
-
     }
 }
