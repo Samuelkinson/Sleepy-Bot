@@ -14,7 +14,7 @@ module.exports = (Client, msg, args, Discord, member ) => {
     .addField('🎤Canal de voz', member.voice.channel ? member.voice.channel.name + `(${member.voice.channel.id})` : 'Not In A VC')
     .addField('🎐Cargos', `${member.roles.cache.map(role => role.toString())}`, true)
     .setFooter({
-        text:'Espero que tenha sido util!', 
+        text:'Comando Patrocinado por @SleepyBot 😴', 
         iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
     }) 
     msg.channel.send({embeds: [embed]}).then(msg.delete())

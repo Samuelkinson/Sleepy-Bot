@@ -11,7 +11,7 @@ module.exports = {
     execute(Client, msg, args, Discord) {
 
         
-    const duration = moment.duration(Client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
+    const duration = moment.duration(Client.uptime).format(" D [dias], H [hrs], m [min], s [s]");
         let embed = new Discord.MessageEmbed()
             .setTitle("⏱Uptime")
             .setDescription(`${duration}`)

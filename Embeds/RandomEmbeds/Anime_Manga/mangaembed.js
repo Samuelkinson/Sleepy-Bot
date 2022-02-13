@@ -29,11 +29,12 @@ module.exports = (Client, msg, args, Discord) =>{
                 .addField('📔 Nº de capítulos:', `${mat.data[0].attributes.chapterCount ? mat.data[0].attributes.chapterCount: "N/A"}`, true)
                 .addField('⭐Ranking:', `${mat.data[0].attributes.ratingRank}`, true)
                 .addField('⭐Média do Rating:', `${mat.data[0].attributes.averageRating}`, true)
-                 .setFooter({
-                    text:`Informações vindas de kitsu.io 😴 `,  
+                .setFooter({
+                    text:`Comando Patrocinado por @SleepyBot 😴`, 
                     iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
-                    }) 
-                    msg.channel.send({embeds:[embed]}).then(msg.delete())  
+                })
+                
+                msg.channel.send({embeds:[embed]}).then(msg.delete())  
 
                 }).catch(err => {
                   return msg.channel.send(`Não encontrei: **${args.join(" ")}**!`)

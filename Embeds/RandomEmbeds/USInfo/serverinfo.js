@@ -4,7 +4,6 @@ module.exports = (Client, msg, args, Discord, guild) => {
     const roles = msg.guild.roles.cache.map(e => e.toString()) // Roles Of Server
     const emojis = msg.guild.emojis.cache.map(e =>  e.toString()) // Emojis Of Server
     const create = msg.guild.createdAt.toLocaleDateString() // Server Create Date 
-    const members = msg.guild.members.cache // Members In Server
 
     guild.fetchOwner().then(guildinfo =>{
         const embed = new Discord.MessageEmbed()
@@ -30,10 +29,9 @@ module.exports = (Client, msg, args, Discord, guild) => {
         .addField('🎐Cargo mais alto', guild.roles.highest.toString())
         .addField('🎐Cargos:', `${roles}`, true)// <true> Means All Roles Will Come In Line*/
         .setFooter({
-            text:'Espero que tenha sido util!', 
+            text:'Comando Patrocinado por @SleepyBot 😴', 
             iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
         }) 
         msg.channel.send({embeds: [embed]}).then(msg.delete())
     });
-
 }

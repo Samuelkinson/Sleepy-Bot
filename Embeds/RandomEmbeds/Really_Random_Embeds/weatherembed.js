@@ -21,7 +21,10 @@ module.exports=(Client, msg, args, Discord, response)=>{
         { name: `🌦Nebulosidade:`, value: `${cloudness}`, inline: true },
     )
     .setThumbnail(`http://openweathermap.org/img/w/${icon}.png`)
-    .setFooter({text:'Sleepy Bot viu pela janela😴💤' }); 
+    .setFooter({
+        text:`Comando Patrocinado por @SleepyBot 😴`, 
+        iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
+    }); 
     
     return msg.channel.send({embeds: [embed]}).then(msg.delete());
 }   

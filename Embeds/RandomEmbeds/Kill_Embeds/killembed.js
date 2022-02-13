@@ -5,12 +5,12 @@ module.exports = (Client, msg, args, Discord, cmd, member,  mentionMember) =>{
                 .setTitle(`\`${mentionMember.user.username}\` foi \*\* morto :knife: \*\*`)
                 .setThumbnail(`${member.user.displayAvatarURL({dynamic: true, size: 512})}`)
                 .addFields(
-                {name: 'Quem?', value: ':zipper_mouth: ', inline: true},
-                {name: 'Como?', value: ':face_with_monocle: ', inline: true},
-                {name: 'Porque?', value: ':sleeping: ', inline: true},
+                {name: 'Quem?', value: '🤐 ', inline: true},
+                {name: 'Como?', value: '🧐' , inline: true},
+                {name: 'Porque?', value: '😴 ', inline: true},
                 )
                 .setFooter({
-                    text:`Não sei de nada`,  
+                    text:`Comando Patrocinado por @SleepyBot 😴`,  
                     iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
                 })
 

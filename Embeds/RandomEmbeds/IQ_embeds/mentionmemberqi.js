@@ -6,6 +6,10 @@ module.exports =(Client, msg, args, Discord) =>{
         .setTitle("🧠 Teste de QI:")
         .setDescription("💡 " + mentionMember.user.username + " QI: `" + iq + "`") 
         .setColor(`#ff748c`)
-
+        .setFooter({
+            text:`Comando Patrocinado por @SleepyBot 😴`, 
+            iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
+        })
+        
     return msg.channel.send({embeds:[embedmentionmember]}).then(msg.delete());    
 }

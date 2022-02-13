@@ -26,7 +26,6 @@ module.exports = {
             }
         } catch (error) {
             return msg.channel.send(`Couldn't find ${query}`)
-           
         }
 
     }

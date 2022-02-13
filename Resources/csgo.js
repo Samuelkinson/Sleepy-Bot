@@ -37,7 +37,10 @@ module.exports = (Client, msg, args, Discord, getStatData, UR_L) => {
             "Total de headshot: " + "__**" + KILLS + "**__" + "\n" +
             "Score" + "__**" + MONEY + "**__" + "\n" +
             "Total de dinheiro ganho: " + "__**" + HR + "**__", true)
-            .addField("Informações vindas de:", `**[tracker.gg](https://tracker.gg/csgo)**`, false)
+            .setFooter({
+                text:`Comando Patrocinado por @SleepyBot 😴`, 
+                iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
+            })
             .setTimestamp()
             .setColor("#37dc0c");
 

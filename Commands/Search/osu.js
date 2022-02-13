@@ -18,6 +18,7 @@ module.exports = {
             const osuUser = await osu.getUser({ u: user })
             osuembed(Client, msg, Discord, osuUser)
         } catch (error) {
+            console.log(error)
             return msg.channel.send('Player not found')
         }
         

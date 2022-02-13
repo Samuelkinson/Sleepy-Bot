@@ -10,11 +10,12 @@ module.exports =(Client, msg, Discord, user) => {
         .setColor('#ff748c')
         .setDescription(json.insult)
         .setFooter({
-            text: Client.user.tag, 
-            iconURL:Client.user.displayAvatarURL({dynamic: true, format: 'png', size: 1024})
-            })  
+            text:`Comando Patrocinado por @SleepyBot 😴`, 
+            iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
+        })
         .setTimestamp()
 
-    return msg.channel.send({embeds: [SeftRoastEmbed]})
+    return msg.channel.send({embeds: [SeftRoastEmbed]}).then(msg.delete())
+     
     })
 }

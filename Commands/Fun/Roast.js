@@ -13,9 +13,9 @@ module.exports = {
             const mentionedMember = msg.mentions.users.first();
             if(!mentionedMember) return msg.channel.send({content: 'Não encontrei esse ser humano'})
             roastEmbed(Discord, Client, mentionedMember, msg)
-        }                   
+        }else{                   
         const user = msg.author.username 
-        SelfroastEmbed(Client, msg, Discord, user)
+        SelfroastEmbed(Client, msg, Discord, user)}
     }
 }
     

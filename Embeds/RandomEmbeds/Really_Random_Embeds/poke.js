@@ -6,8 +6,9 @@ module.exports = (Client, msg, args, Discord, user, response) =>{
               .setColor("#ff748c")
               .setDescription((user.toString() + " levou poke de " + msg.author.toString()))
               .setFooter({
-                  text: `Poked`,
-                })
+                text:`Comando Patrocinado por @SleepyBot 😴`, 
+                iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
+              })
               .setURL(response.body.url);
      return msg.channel.send({embeds: [embed]}).then(msg.delete());
 

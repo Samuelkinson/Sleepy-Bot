@@ -7,7 +7,7 @@ module.exports = {
     execute(Client, msg, args, Discord){
         msg.channel.send('A calcular o ping...').then((resultMessage)=> {
             const ping = resultMessage.createdTimestamp - msg.createdTimestamp
-            msg.channel.send(`🏓Latency is ${ping}ms. API Latency is ${Math.round(Client.ws.ping)}ms`);})
+            msg.channel.send(`🏓Latency é ${ping}ms. API Latency é ${Math.round(Client.ws.ping)}ms`);})
           
     }
 }

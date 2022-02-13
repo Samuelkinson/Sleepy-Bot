@@ -19,8 +19,10 @@ module.exports = (Discord, msg, c, country, flag ) =>{
 			{name: '🧪Total de Testes', value: formatNumber(c.tests.total), inline: true},
 		)			
     .setFooter({
-        text:`Última atualização: ${new Date(c.time).toISOString().substring(0, 10)}`
+        text:`Última atualização: ${new Date(c.time).toISOString().substring(0, 10)}; Comando Patrocinado por @SleepyBot 😴 `  
     })
+        
+    
 
     return msg.channel.send({embeds:[embed]}).then(msg.delete()) 
 }

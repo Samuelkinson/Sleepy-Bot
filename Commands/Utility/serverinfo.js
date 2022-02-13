@@ -4,7 +4,7 @@ module.exports = {
     name: 'ServerInfo' ,
     aliases: ['serverinfo', 'si', 'sinfo', 'si'],
     permissions: ['ADMINISTRATOR'],
-    cooldown: 120,
+    cooldown: 0,
     description: 'Shows User Info About A User or Pinged User',
     execute(Client, msg, args, Discord) {
 

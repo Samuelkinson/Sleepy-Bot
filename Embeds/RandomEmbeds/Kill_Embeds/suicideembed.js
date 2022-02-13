@@ -5,10 +5,10 @@ module.exports = (Client, msg, args, Discord, cmd, member) =>{
     .setTitle(`\`${member.user.username}\` \*\*matou-se\*\* 💥`)
     .setThumbnail(`${member.user.displayAvatarURL({dynamic: true, size: 512})}`)
     .addFields(
-    {name: 'Porque?', value: ':sob:', inline: true},
+    {name: 'Porque?', value: '😢', inline: true},
     )
     .setFooter({
-        text:`${member.user.username} Vou sentir saudades`, 
+        text:`Comando Patrocinado por @SleepyBot 😴`, 
         iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
     }) 
 
