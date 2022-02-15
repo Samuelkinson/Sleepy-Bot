@@ -5,7 +5,7 @@ module.exports = {
     aliases: [],
     permissions: [],
     cooldown: 0,
-    description: 'Hack a user bep bop',
+    description: 'Hack a alguém bep bop😴',
    async execute(Client, msg, args, Discord) {
 
     const user = msg.mentions.users.first();

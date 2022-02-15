@@ -5,7 +5,7 @@ module.exports = {
     aliases: ['fliptexto'],
     permissions: [],
     cooldown: 0,
-    description: 'Inverte o texto',
+    description: 'Inverte o texto😴',
     async execute(Client, msg, args, Discord) {
 
         if(!args[0]) return msg.reply('Preciso de texto')

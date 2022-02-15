@@ -3,7 +3,7 @@ module.exports = {
     aliases: ['time'],
     permissions: [],
     cooldown: 0,
-    description: 'Diz as horas',
+    description: 'Diz as horas😴',
     async execute(Client, msg, args, Discord) {
 
         var hoje = new Date()

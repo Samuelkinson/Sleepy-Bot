@@ -3,7 +3,7 @@ module.exports = {
     aliases: ['8b', ],
     permissions: [],
     cooldown: 8,
-    description: '8ball Command',
+    description: '8ball 😴',
     async execute(Client, msg, args, Discord) {
         if(!args[0]) return msg.reply('Preciso de uma pergunta!')
         let replies = ['Sim', 'Não', 'Parece-me bem', 'Parece-me mal', 'Melhor não te contar', 'Definitivamente','Gosto da ideia', 'Não me parece']

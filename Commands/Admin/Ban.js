@@ -3,8 +3,8 @@ module.exports = {
     name: 'ban',
     aliases: ['b', 'bannir', 'xau'],
     permissions: ['ADMINISTRATOR', 'BAN_MEMBERS',],
-    cooldown: 1,
-    description: `Ban a member from a server | ${Prefix} ban <User> <Reason>`,
+    cooldown: 0,
+    description: `Banir um membro do servidor😴`,
     async execute(Client, msg, args, Discord) {
         const mentionMember = msg.mentions.members.first();
         let reason = args.slice(1).join(' ');

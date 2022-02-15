@@ -4,7 +4,7 @@ module.exports = {
     aliases: ['expulsa', 'k'],
     permissions: ['ADMINISTRATOR', 'KICK_MEMBERS',],
     cooldown: 0,
-    description: `Kicks a person the from server | ${Prefix} kick <User> <Reason>`,
+    description: `Kick a uma pessoa do servidor😴`,
     async execute(Client, msg, args, Discord) {
         const mentionMember = msg.mentions.members.first();
         let reason = args.slice(1).join(' ');

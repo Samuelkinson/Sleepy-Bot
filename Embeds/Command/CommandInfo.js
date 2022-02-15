@@ -1,3 +1,5 @@
+const prefix = require('../../config.json').prefix
+
 module.exports = (msg, Discord, command, Client) => {
     let embed = new Discord.MessageEmbed()
         .setTitle(`Informação sobre o commando: \`${command.name}\``)
@@ -9,7 +11,7 @@ module.exports = (msg, Discord, command, Client) => {
         )
         .setColor('GREEN')
         .setFooter({
-            text:'Usage Syntax: <required> [optional]'
+            text:`${prefix}<comando> [opcional]`
         })
         .setTimestamp()
 

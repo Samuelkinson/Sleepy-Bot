@@ -6,7 +6,7 @@ module.exports = {
     aliases: ['qi'],
     permissions: [],
     cooldown: 0,
-    description: 'Teste de QI',
+    description: 'Teste de QI😴',
     async execute(Client, msg, args, Discord) {
 
     const mentionMember = msg.mentions.members.first();

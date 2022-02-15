@@ -3,12 +3,12 @@ module.exports = {
     aliases: ['sleepsv', 'mysv'],
     permissions: [],
     cooldown: 0,
-    description: 'Mostra os meus servidores',
+    description: 'Mostra os Sleepy Servers 😴',
     execute(Client, msg, args, Discord) {
 
      let embed = new Discord.MessageEmbed()
          .setColor('#37dc0c')
-         .setTitle('🛐Os meus servidores')
+         .setTitle('🛐Sleepy Servers')
          .setDescription(`😴Estou em ${Client.guilds.cache.size} servidores!`) 
          .setFooter({
             text:`Sleepy Servers`,  

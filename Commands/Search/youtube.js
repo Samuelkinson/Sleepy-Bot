@@ -6,7 +6,7 @@ module.exports = {
     aliases: ['ytsr', 'ytsearch', 'yt'],
     permissions: [],
     cooldown: 0,
-    description: '',
+    description: 'Procura no Youtube😴',
     async execute(Client, msg, args, Discord) {
 
         let query = args.join("")

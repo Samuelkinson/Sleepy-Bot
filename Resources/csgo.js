@@ -23,9 +23,9 @@ module.exports = (Client, msg, args, Discord, getStatData, UR_L) => {
         var HR = getStatData(14, $);
 
         var embed = new Discord.MessageEmbed()
-            .setTitle("__***CSGO Stats***__")
+            .setTitle("__***Estátisticas CSGO ***__")
             .setURL(UR_L)
-            .addField("Current stats",
+            .addField("Estátisticas:",
             "Total KD: " + "__**" + KD + "**__" + "\n" +
             "% De vitórias totais: " + "__**" + WIN + "**__" + "\n" +
             "Total de MVPs: " + "__**" + MVP + "**__" + "\n" +

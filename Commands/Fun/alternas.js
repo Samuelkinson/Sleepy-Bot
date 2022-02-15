@@ -3,7 +3,7 @@ module.exports = {
     aliases: [],
     permissions: [],
     cooldown: 0,
-    description: 'Alternas são a minha vida',
+    description: 'Alternas são a minha vida 😴',
     execute(Client, msg, args, Discord) {
 
         const alternas = [

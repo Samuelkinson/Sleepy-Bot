@@ -16,7 +16,7 @@ module.exports = {
     aliases: ['socorro', 'h', 'ebook', 'ajuda'],
     permissions: ['SEND_MESSAGES'],
     cooldown: 2,
-    description: `Help command | ${DefaultPrefix}help [CommandName] or [Category]`,
+    description: `Comando de ajuda | ${DefaultPrefix}help [Commando] ou [Categoria] `,
     async execute(Client, msg, args, Discord) {
 
             let Prefix;

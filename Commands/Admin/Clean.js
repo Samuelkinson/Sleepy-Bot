@@ -5,7 +5,7 @@ module.exports = {
     aliases:['limpa', 'l', 'c', 'purge', 'clear','p'],
     cooldown: 0,
     permissions:['ADMINISTRATOR','MANAGE_MESSAGES'],
-    description: `Cleans the channel you send the message to | ${Prefix} clean <NumberOfMsgs> (max: 100)`,
+    description: `Limpa as mensagens do canal selecionado😴`,
       async  execute(Client, msg, args, Discord) {
             let amount = args[0]
 

@@ -8,7 +8,7 @@ module.exports = {
     aliases: ['wikipedia'],
     permissions: [],
     cooldown: 0,
-    description: '',
+    description: 'Procura na Wikipédia😴',
     async execute(Client, msg, args, Discord) {
 
         let query = args.join(" ")

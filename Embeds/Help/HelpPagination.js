@@ -1,5 +1,3 @@
-const { buttonsPagination } = require('djs-buttons-pagination')
-
 module.exports = async (Discord, Client, msg, categories, Prefix) => {
     let HelpInfo = new Discord.MessageEmbed()
         .setColor('#c19e3c')

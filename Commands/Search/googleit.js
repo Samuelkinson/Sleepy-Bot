@@ -5,7 +5,7 @@ module.exports = {
     aliases: ['git','googleit'],
     permissions: [],
     cooldown: 0,
-    description: 'Search anything on google!',
+    description: 'Não sabes? Pergunta ao google! 😴',
     async execute(Client, msg, args, Discord) {
 
         let embed = new Discord.MessageEmbed()

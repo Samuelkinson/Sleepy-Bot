@@ -10,7 +10,7 @@ module.exports = {
     aliases: [],
     permissions: [],
     cooldown: 0,
-    description: 'Osu command',
+    description: 'Osu tracker😴',
     async execute(Client, msg, args, Discord) {
 
         const user = args.join(' ') 

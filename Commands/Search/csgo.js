@@ -18,7 +18,7 @@ module.exports = {
     aliases: [],
     permissions: [],
     cooldown: 0,
-    description: 'Cs Go command',
+    description: 'Cs Go tracker 😴',
     execute(Client, msg, args, Discord) {
 
     var UR_L = "https://tracker.gg/csgo/profile/steam/" + args[0] + "/overview";

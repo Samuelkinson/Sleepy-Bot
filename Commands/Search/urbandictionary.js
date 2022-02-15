@@ -6,7 +6,7 @@ module.exports = {
     aliases: [],
     permissions: [],
     cooldown: 0,
-    description: '',
+    description: 'Dicionário em inglês 😴',
     async execute(Client, msg, args, Discord) {
 
         let query = args.join(' ');

@@ -5,7 +5,7 @@ module.exports = {
     aliases: ['estupido', 'idiota', 'idiot'],
     permissions: [],
     cooldown: 0,
-    description: 'Gif a chamar alguem de estúpido',
+    description: 'Gif a chamar alguem de estúpido 😴',
     execute(Client, msg, args, Discord) {
 
     superagent.get('https://nekos.life/api/v2/img/baka')

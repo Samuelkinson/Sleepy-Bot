@@ -3,7 +3,7 @@ module.exports = {
     aliases: ['dado'],
     permissions: [],
     cooldown: 0,
-    description: 'Rola o Dado',
+    description: 'Rola o Dado😴',
     execute(Client, msg, args, Discord) {
 
         function dice() {

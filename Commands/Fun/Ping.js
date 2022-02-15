@@ -3,7 +3,7 @@ module.exports = {
     aliases:[],
     permissions: ['SEND_MESSAGES'],
     cooldown: 5,
-    description: 'Ping command',
+    description: 'Ping comando😴',
     execute(Client, msg, args, Discord){
         msg.channel.send('A calcular o ping...').then((resultMessage)=> {
             const ping = resultMessage.createdTimestamp - msg.createdTimestamp

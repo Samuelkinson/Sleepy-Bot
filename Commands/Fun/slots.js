@@ -5,9 +5,10 @@ module.exports = {
     aliases: [],
     permissions: [],
     cooldown: 0,
-    description: 'Joga slots',
+    description: 'Joga slots😴',
     execute(Client, msg, args, Discord) {
 
-		slots(Client, msg, args, Discord)
+  	slots(Client, msg, args, Discord)
+
 	}
 }

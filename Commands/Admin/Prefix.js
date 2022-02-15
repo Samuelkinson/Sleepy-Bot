@@ -9,7 +9,7 @@ module.exports = {
     aliases: ['pre', 'prefixo'],
     permissions: ['ADMINISTRATOR', 'MANAGE_GUILD'],
     cooldown: 5,
-    description: `Change the prefix for your server | ${DefaultPrefix} <NewPrefix>`,
+    description: `Muda o prefixo do servidor 😴`,
     async execute(Client, msg, args, Discord) {
 
         const data = await GuildSchema.findOne({

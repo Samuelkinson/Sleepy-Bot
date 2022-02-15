@@ -6,7 +6,7 @@ module.exports = {
     aliases: ['r', 'humilha', 'roast'],
     permissions: ['SEND_MESSAGES'],
     cooldown: 5,
-    description: 'Roasts the user',
+    description: 'Roast a alguém😴',
     async execute(Client, msg, args, Discord) {
         
         if(args[0]){

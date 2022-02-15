@@ -5,7 +5,7 @@ module.exports = {
     aliases: [],
     permissions: [],
     cooldown: 0,
-    description: 'Procura o teu manga favorito',
+    description: 'Procura manga 😴',
     execute(Client, msg, args, Discord) {
 
         let query = args.join(' ');

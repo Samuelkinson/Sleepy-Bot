@@ -5,7 +5,7 @@ module.exports = {
     aliases: ['say'],
     permissions: [],
     cooldown: 5,
-    description: 'Faz o bot dizer algo no canal especificado',
+    description: 'Faz o bot dizer algo com embed😴',
     async execute(Client, msg, args, Discord) {
 
         

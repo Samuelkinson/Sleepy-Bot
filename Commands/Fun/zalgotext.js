@@ -5,7 +5,7 @@ module.exports = {
     aliases: [],
     permissions: [],
     cooldown: 0,
-    description: 'Cria texto z̛̮̈aͦ͛̄l̑̄͆g̈͊͂ō̽̌',
+    description: 'Cria texto z̛̮̈aͦ͛̄l̑̄͆g̈͊͂ō̽̌😴',
     async execute(Client, msg, args, Discord) {
 
         if(!args[0]) return msg.reply('Preciso de texto')

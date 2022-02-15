@@ -3,7 +3,7 @@ module.exports = {
     aliases: ['uavatar', 'avatar'],
     permissions: [],
     cooldown: 0,
-    description: '',
+    description: 'Avatar do utilizador😴',
    async execute(Client, msg, args, Discord) {
 
         if (!msg.mentions.users.size) {     

@@ -18,7 +18,7 @@ module.exports = {
     aliases: [ 'cov-19','c-19', 'c19', 'covid' ],
     permissions: [],
     cooldown: 0,
-    description: 'Covid-19 country & LeaderBoard',
+    description: 'Covid-19 país e Pódio😴',
     async execute(Client, msg, args, Discord, cmd) {
 
      

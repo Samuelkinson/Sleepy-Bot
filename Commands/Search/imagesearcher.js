@@ -11,7 +11,7 @@ const google = new Scraper({
       aliases: ['foundpic', 'pic', 'searchpic'],
       permissions: [],
       cooldown: [],
-      description: 'Sends an image to a discord text channel',
+      description: 'Procura uma imagem toda linda😴',
 
       async execute(Client, msg, args) {
         

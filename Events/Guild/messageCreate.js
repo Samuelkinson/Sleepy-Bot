@@ -2,6 +2,7 @@ const DefaultPrefix = require('../../config.json').prefix
 const CooldownEmbed = require('../../Embeds/Command/CommandCooldown');
 const CommandNotFound = require('../../Embeds/Command/NoCommand')
 const GuildSchema = require('../../Schemas/Guild-Schema')
+const CommandSchema = require('../../Schemas/Command-Schema')
 
 const cooldowns = new Map();
 module.exports = async (Discord, Client, msg) =>{
@@ -102,6 +103,12 @@ module.exports = async (Discord, Client, msg) =>{
     
 
     //Executes Valid Command
-    if(command) command.execute(Client, msg, args, Discord, cmd)
+    if(command) {
+        const check = await CommandSchema.findOne({ Guild: msg.guild.id, Cmds: cmd })
+        if(check){
+        if(check.Cmds.includes(command.name)) return msg.channel.send('Comando desativado')
+        } else {
+        command.execute(Client, msg, args, Discord, cmd)
+    }}
 
 }

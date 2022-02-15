@@ -6,7 +6,7 @@ module.exports = {
     aliases: ['dadjoke'],
     permissions: [],
     cooldown: 0,
-    description: 'Piadas de pai',
+    description: 'Piadas de pai 😴',
     async execute(Client, msg, args, Discord) {
         
         await superagent
