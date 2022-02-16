@@ -18,6 +18,10 @@ module.exports = (Client, msg, args, Discord, response)=>{
         .addField('Criado:', response.created_at )  // Created Of User Searched
         .addField('Blog:', response.blog ? response.blog : 'Sem blog') //Blog Of User Searched */
         .addField('Pode ser contratado?', response.hireable ? response.hireable : 'Sem informação sobre contratações') // Twitter Of User Searched
+        .setFooter({
+            text:`Comando Patrocinado por @SleepyBot 😴`, 
+            iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
+    })
     return msg.channel.send({embeds: [ embed]}).then(msg.delete()); 
 
 }

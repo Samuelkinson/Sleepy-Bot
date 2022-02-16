@@ -1,5 +1,5 @@
 const fetch = require('node-fetch')
-const memeEmbed = require('../../Embeds/RandomEmbeds/Really_Random_Embeds/memeembed')
+const memeEmbed = require('../../Embeds/CommandEmbeds/FunEmbeds/memeembed')
 
 module.exports = {
     name: 'meme' ,

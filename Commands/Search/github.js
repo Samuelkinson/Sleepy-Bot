@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const githubembed = require('../../Embeds/RandomEmbeds/Really_Random_Embeds/githubembed')
+const githubembed = require('../../Embeds/CommandEmbeds/SearchEmbeds/githubembed')
 
 module.exports = {
     name: 'github' ,

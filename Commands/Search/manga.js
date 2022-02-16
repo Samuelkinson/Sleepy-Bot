@@ -1,4 +1,4 @@
-const mangaembed = require('../../Embeds/RandomEmbeds/Anime_Manga/mangaembed')
+const mangaembed = require('../../Embeds/CommandEmbeds/SearchEmbeds/Anime_Manga/mangaembed')
 
 module.exports = {
     name: 'manga' ,

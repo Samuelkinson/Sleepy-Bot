@@ -1,4 +1,4 @@
-const slots = require('../../Embeds/RandomEmbeds/Really_Random_Embeds/slotsembed')
+const slots = require('../../Embeds/CommandEmbeds/FunEmbeds/slotsembed')
 
 module.exports = {
     name: 'slots' ,

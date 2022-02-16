@@ -1,7 +1,7 @@
 const axios = require('axios')
 const lookup = require('iso-countries-lookup');
-const covid19 = require('../../Embeds/RandomEmbeds/Covid-19_Embeds/covid19')
-const covid19Leaderboard = require('../../Embeds/RandomEmbeds/Covid-19_Embeds/covi19leaderboard')
+const covid19 = require('../../Embeds/CommandEmbeds/UtilityEmbeds/Covid-19_Embeds/covid19')
+const covid19Leaderboard = require('../../Embeds/CommandEmbeds/UtilityEmbeds/Covid-19_Embeds/covi19leaderboard')
 const covidapikey = require('../../config.json').covidapikey
 
 var options = {

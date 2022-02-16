@@ -1,4 +1,4 @@
-const trim = require('../../../Resources/trimfunction')
+const trim = require('../../../../Resources/trimfunction')
 
 module.exports = (Client, msg, args, Discord, summary)=>{
     

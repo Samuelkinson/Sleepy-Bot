@@ -1,5 +1,5 @@
 const superagent = require("snekfetch")
-const pokeembed = require('../../Embeds/RandomEmbeds/Really_Random_Embeds/poke')
+const pokeembed = require('../../Embeds/CommandEmbeds/FunEmbeds/poke')
 
 module.exports = {
     name: 'poke' ,

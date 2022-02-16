@@ -1,6 +1,6 @@
 const axios = require("axios")
 const weatherkey = require("../../config.json").weatherkey
-const weatherembed = require('../../Embeds/RandomEmbeds/Really_Random_Embeds/weatherembed')
+const weatherembed = require('../../Embeds/CommandEmbeds/SearchEmbeds/weatherembed')
 
 module.exports = {
     name: 'weather' ,

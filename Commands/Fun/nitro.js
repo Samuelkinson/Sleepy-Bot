@@ -1,5 +1,5 @@
 const Prefix = require('../../Config.json').prefix
-const nitro = require('../../Embeds/RandomEmbeds/Really_Random_Embeds/discordnitroembed')
+const nitro = require('../../Embeds/CommandEmbeds/FunEmbeds/discordnitroembed')
 
 module.exports = {
     name: 'nitro' ,

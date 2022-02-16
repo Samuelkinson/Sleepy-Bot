@@ -1,7 +1,7 @@
 const { summary } = require('wikipedia');
 const wiki = require('wikipedia')
-const disambiguationembed = require('../../Embeds/RandomEmbeds/WikiEmbed/disambiguationembed')
-const standardembed = require('../../Embeds/RandomEmbeds/WikiEmbed/standardembed')
+const disambiguationembed = require('../../Embeds/CommandEmbeds/SearchEmbeds/WikiEmbed/disambiguationembed')
+const standardembed = require('../../Embeds/CommandEmbeds/SearchEmbeds/WikiEmbed/standardembed')
 
 module.exports = {
     name: 'wiki' ,

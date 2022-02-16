@@ -1,5 +1,5 @@
-const authorqiembed = require('../../Embeds/RandomEmbeds/IQ_embeds/authorqi')
-const mentionMemberembed = require('../../Embeds/RandomEmbeds/IQ_embeds/mentionmemberqi')
+const authorqiembed = require('../../Embeds/CommandEmbeds/FunEmbeds/IQ_embeds/authorqi')
+const mentionMemberembed = require('../../Embeds/CommandEmbeds/FunEmbeds/IQ_embeds/mentionmemberqi')
 
 module.exports = {
     name: 'iq' ,

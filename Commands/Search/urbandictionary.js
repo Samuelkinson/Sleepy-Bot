@@ -1,5 +1,5 @@
 const axios = require('axios');
-const answerembed = require('../../Embeds/RandomEmbeds/Really_Random_Embeds/urbanembed')
+const answerembed = require('../../Embeds/CommandEmbeds/SearchEmbeds/urbanembed')
 
 module.exports = {
     name: 'urban' ,

@@ -1,4 +1,4 @@
-const serverinfoembed = require('../../Embeds/RandomEmbeds/USInfo/serverinfo')
+const serverinfoembed = require('../../Embeds/CommandEmbeds/UtilityEmbeds/USInfo/serverinfo')
 
 module.exports = {
     name: 'ServerInfo' ,

@@ -1,4 +1,4 @@
-const userinfoembed = require('../../Embeds/RandomEmbeds/USInfo/userinfo')
+const userinfoembed = require('../../Embeds/CommandEmbeds/UtilityEmbeds/USInfo/userinfo')
 
 module.exports = {
     name: 'userinfo' ,

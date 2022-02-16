@@ -1,5 +1,5 @@
 const ytsr = require("ytsr")
-const youtubeembed = require('../../Embeds/RandomEmbeds/Really_Random_Embeds/youtubeembed')
+const youtubeembed = require('../../Embeds/CommandEmbeds/SearchEmbeds/youtubeembed')
 
 module.exports = {
     name: 'youtube' ,

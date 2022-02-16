@@ -1,5 +1,5 @@
-const roastEmbed = require('../../Embeds/RandomEmbeds/roastembed/RoastEmbed')
-const SelfroastEmbed = require('../../Embeds/RandomEmbeds/roastembed/SelfRoastEmbed')
+const roastEmbed = require('../../Embeds/CommandEmbeds/FunEmbeds/roastembed/RoastEmbed')
+const SelfroastEmbed = require('../../Embeds/CommandEmbeds/FunEmbeds/roastembed/SelfRoastEmbed')
 
 module.exports = {
     name: 'piada' ,

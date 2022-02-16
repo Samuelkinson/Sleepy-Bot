@@ -1,5 +1,5 @@
-const suicideembed = require("../../Embeds/RandomEmbeds/Kill_Embeds/suicideembed");
-const killedembed = require("../../Embeds/RandomEmbeds/Kill_Embeds/killembed");
+const suicideembed = require("../../Embeds/CommandEmbeds/FunEmbeds/Kill_Embeds/suicideembed");
+const killedembed = require("../../Embeds/CommandEmbeds/FunEmbeds/Kill_Embeds/killembed");
 
 module.exports = {
     name: 'kill' ,
