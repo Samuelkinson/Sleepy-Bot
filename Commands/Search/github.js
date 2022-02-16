@@ -10,7 +10,7 @@ module.exports = {
     async execute (Client, msg, args, Discord) {
 
         const name = args.join(' ')
-        if(!name) return msg.reply('Preciso de um utilizador.') // If User Is Not Found On GitHub
+        if(!name) return msg.reply('Preciso de um utilizador.') // If no user
         const url = `https://api.github.com/users/${name}` // Link From BOT Will Get Info
 
         let response
