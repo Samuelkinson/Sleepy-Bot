@@ -8,6 +8,9 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Diz o tempo',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     async execute(Client, msg, args, Discord) {
 
         const location = args.join(" ")

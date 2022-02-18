@@ -11,6 +11,9 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Osu tracker😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     async execute(Client, msg, args, Discord) {
 
         const user = args.join(' ') 

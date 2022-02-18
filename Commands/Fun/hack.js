@@ -6,6 +6,10 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Hack a alguém bep bop😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
+    
    async execute(Client, msg, args, Discord) {
 
     const user = msg.mentions.users.first();

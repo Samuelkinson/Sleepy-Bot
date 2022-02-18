@@ -7,6 +7,9 @@ module.exports = {
     permissions: ['SEND_MESSAGES'],
     cooldown: 5,
     description: 'Roast a alguém😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     async execute(Client, msg, args, Discord) {
         
         if(args[0]){

@@ -7,6 +7,10 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Envia um meme 😴',
+    premium: false,
+    premiumguild: false,
+    owner: false,
+    
     async execute(Client, msg, args, Discord) {
 
         fetch('https://meme-api.herokuapp.com/gimme')

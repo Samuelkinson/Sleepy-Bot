@@ -7,6 +7,9 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Procura no Youtube😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     async execute(Client, msg, args, Discord) {
 
         let query = args.join("")

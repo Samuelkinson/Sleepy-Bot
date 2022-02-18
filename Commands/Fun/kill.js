@@ -7,12 +7,17 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Farto de alguém? Fácil! Basta matá-los! 😴',
+    premium: false,
+    premiumguild: false,
+    owner: false,
+    
     execute(Client, msg, args, Discord, cmd) {
 
-        try{
-            const mentionMember = msg.mentions.members.first();
-            const member = msg.mentions.members.first() || msg.member
-            
+        
+        const mentionMember = msg.mentions.members.first();
+        const member = msg.mentions.members.first() || msg.member
+        
+        try{   
             if(args[0].toLowerCase() === 'me') return suicideembed(Client, msg, args, Discord, cmd, member) ; //Killed himself
             if(!mentionMember) return msg.channel.send({content:'Não encontrei'}).then(msg.delete()); //No name without identity   
             if(mentionMember) return killedembed(Client, msg, args, Discord, cmd, member,  mentionMember) ; //Dude got killed

@@ -6,4 +6,4 @@ const mongoose = require('mongoose')
     })
 
 
-module.exports = mongoose.model('cmds', Schema)
+module.exports = mongoose.model('Command-Schema', Schema)

@@ -1,8 +1,11 @@
 const DefaultPrefix = require('../../config.json').prefix
 const CooldownEmbed = require('../../Embeds/Command/CommandCooldown');
-const CommandNotFound = require('../../Embeds/Command/NoCommand')
-const GuildSchema = require('../../Schemas/Guild-Schema')
-const CommandSchema = require('../../Schemas/Command-Schema')
+const CommandNotFound = require('../../Embeds/Command/NoCommand');
+const GuildSchema = require('../../Schemas/Guild-Schema');
+const CommandSchema = require('../../Schemas/Command-Schema');
+const PremiumSchema = require('../../Schemas/Premium-Schema');
+const OwnerSchema = require('../../Schemas/Owner-Schema');
+const PremiumGuildSchema = require('../../Schemas/Premium-Guild-Schema');
 
 const cooldowns = new Map();
 module.exports = async (Discord, Client, msg) =>{
@@ -100,10 +103,23 @@ module.exports = async (Discord, Client, msg) =>{
             return msg.channel.send({ content: `Não tens permissões`})
         }
     }
-    
+    //Checks if Premium
+    if(command.premium && !(await PremiumSchema.findOne({User: msg.author.id}))) return msg.channel.send('Não és premium!')
 
+    //Checks if Premium Guild Id
+    if(command.premiumguild && !(await PremiumGuildSchema.findOne({Guild: msg.guild.id}, async(err, data) => {
+        if(!data) return msg.channel.send(`Precisas de Premium Guild!`);
+        if(!data.Permanent && Date.now()> data.Expire){
+            data.delete();
+            return msg.channel.send(`Premium Guild expirou!`);
+        } 
+    }))) return 
+
+    //Checks if Owner
+    if(command.owner && !(await OwnerSchema.findOne({User: msg.author.id}))) return msg.channel.send('Não és owner!')
     //Executes Valid Command
     if(command) {
+        
         const check = await CommandSchema.findOne({ Guild: msg.guild.id, Cmds: cmd })
         if(check){
         if(check.Cmds.includes(command.name)) return msg.channel.send('Comando desativado')

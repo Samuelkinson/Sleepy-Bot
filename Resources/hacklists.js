@@ -131,7 +131,7 @@ module.exports = async (Client, msg, args, Discord, user) => {
           text: `O hack foi terminado`,
         });
     const prompt = await msg.channel.send(`Hacking ${user ? hacked.username : hacked} agora...`);
-
+ 
         await wait(2700);
         await prompt.edit('Encontrando login discord ...');
         await wait(2700);
@@ -157,7 +157,4 @@ module.exports = async (Client, msg, args, Discord, user) => {
         await wait(1000);  
         await msg.channel.send({embeds: [embedmsglist]}).then(msg.delete());
         await prompt.delete();
-        await wait(4700); 
-        
-    await prompt.delete
 }

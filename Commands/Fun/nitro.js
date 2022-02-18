@@ -7,6 +7,10 @@ module.exports = {
     permissions: [],
     cooldown:0,
     description: 'Nitro grátis totalmente real 😴',
+    premium: false,
+    premiumguild: false,
+    owner: false,
+    
     execute(Client, msg, args, Discord) {
 
         if(args[0]) return  msg.channel.send({content:`Usa ${Prefix}nitro`});

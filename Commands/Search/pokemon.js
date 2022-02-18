@@ -7,6 +7,9 @@ module.exports = {
     permissions: [],
     cooldown:[],
     description: '',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     async execute(Client, msg, args, Discord) {
 
         const pokemon = msg.content.toLowerCase().split(" ")[1]; 

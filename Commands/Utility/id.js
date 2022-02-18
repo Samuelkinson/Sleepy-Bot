@@ -4,6 +4,9 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: '',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     execute(Client, msg, args, Discord) {
 
         var mention = msg.mentions.members.first() || msg.member 

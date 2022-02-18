@@ -7,6 +7,11 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Piadas de pai 😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
+    
+    
     async execute(Client, msg, args, Discord) {
         
         await superagent

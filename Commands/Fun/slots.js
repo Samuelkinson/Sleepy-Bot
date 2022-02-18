@@ -6,6 +6,10 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Joga slots😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
+    
     execute(Client, msg, args, Discord) {
 
   	slots(Client, msg, args, Discord)

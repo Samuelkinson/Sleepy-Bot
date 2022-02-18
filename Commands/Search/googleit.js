@@ -6,6 +6,9 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Não sabes? Pergunta ao google! 😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     async execute(Client, msg, args, Discord) {
 
         let embed = new Discord.MessageEmbed()

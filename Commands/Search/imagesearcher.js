@@ -12,6 +12,9 @@ const google = new Scraper({
       permissions: [],
       cooldown: [],
       description: 'Procura uma imagem toda linda😴',
+      premium: false,
+      premiumguild: false, 
+      owner: false,
 
       async execute(Client, msg, args) {
         

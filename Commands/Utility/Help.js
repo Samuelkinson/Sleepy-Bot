@@ -17,6 +17,9 @@ module.exports = {
     permissions: ['SEND_MESSAGES'],
     cooldown: 2,
     description: `Comando de ajuda | ${DefaultPrefix}help [Commando] ou [Categoria] `,
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     async execute(Client, msg, args, Discord) {
 
             let Prefix;

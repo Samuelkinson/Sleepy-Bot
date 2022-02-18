@@ -8,6 +8,9 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Diz o Uptime do SleepyBot',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     execute(Client, msg, args, Discord) {
 
         

@@ -6,6 +6,10 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Inverte o texto😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
+    
     async execute(Client, msg, args, Discord) {
 
         if(!args[0]) return msg.reply('Preciso de texto')

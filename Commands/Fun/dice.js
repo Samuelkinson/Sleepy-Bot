@@ -4,6 +4,11 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Rola o Dado😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
+   
+    
     execute(Client, msg, args, Discord) {
 
         function dice() {

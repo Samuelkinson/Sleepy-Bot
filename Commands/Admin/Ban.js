@@ -1,4 +1,3 @@
-const Prefix = require('../../config.json').prefix
 module.exports = {
     name: 'ban',
     aliases: ['b', 'bannir', 'xau'],

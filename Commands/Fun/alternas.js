@@ -4,6 +4,11 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Alternas são a minha vida 😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
+    
+    
     execute(Client, msg, args, Discord) {
 
         const alternas = [

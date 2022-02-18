@@ -6,6 +6,9 @@ module.exports = {
     permissions: ['ADMINISTRATOR'],
     cooldown: 0,
     description: 'Shows User Info About A User or Pinged User',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     execute(Client, msg, args, Discord) {
 
         const member = msg.mentions.members.first() || msg.member   

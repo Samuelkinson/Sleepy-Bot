@@ -8,6 +8,9 @@ module.exports = {
     permissions: ['SEND_MESSAGES'],
     cooldown: 0,
     description: `Sets an alarm | ${Prefix} timer <time> <reason>`,
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     execute(Client, msg, args, Discord) {
         let time = args[0]
         if(!time) return msg.reply({content: `Escreve ${Prefix} timer <time> <reason>`})

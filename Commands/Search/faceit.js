@@ -7,6 +7,9 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Procura o perfil faceit',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     async execute(Client, msg, args, Discord) {
 
     const nickname = args.join(' ')

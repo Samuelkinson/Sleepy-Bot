@@ -7,6 +7,10 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Dá poke em alguém😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
+    
     execute(Client, msg, args, Discord) {
         const user = msg.mentions.users.first();
 

@@ -7,6 +7,9 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: `Translates to all languages `,
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     async execute(Client, msg, args, Discord) {   
         
     try{

@@ -4,6 +4,9 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Diz as horas😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     async execute(Client, msg, args, Discord) {
 
         var hoje = new Date()

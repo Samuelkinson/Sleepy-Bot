@@ -6,6 +6,10 @@ module.exports = {
     permissions: [],
     cooldown: 5,
     description: 'Faz o bot dizer algo com embed😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
+   
     async execute(Client, msg, args, Discord) {
 
         

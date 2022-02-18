@@ -19,6 +19,9 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Covid-19 país e Pódio😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     async execute(Client, msg, args, Discord, cmd) {
 
      

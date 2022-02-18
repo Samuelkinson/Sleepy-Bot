@@ -6,6 +6,9 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Procura anime 😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     execute(Client, msg, args, Discord) {
 
         let query = args.join(' ');

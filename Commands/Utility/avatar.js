@@ -4,6 +4,10 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Avatar do utilizador😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
+
    async execute(Client, msg, args, Discord) {
 
         if (!msg.mentions.users.size) {     

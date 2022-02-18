@@ -4,6 +4,9 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: '',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     async execute(Client, msg, args, Discord) {
         
     const embed = new Discord.MessageEmbed()

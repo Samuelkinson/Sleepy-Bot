@@ -4,6 +4,9 @@ module.exports = {
     permissions: [],
     cooldown: 5,
     description: 'Starts a poll',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     async execute(Client, msg, args, Discord) {
         
         let theDescription = args.slice(0).join(` `)

@@ -4,6 +4,9 @@ module.exports = {
     permissions: ['CREATE_INSTANT_INVITE', 'EMBED_LINKS', 'SEND_MESSAGES'],
     cooldown: 120,
     description: 'Creates an invite for the server',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
     execute(Client, msg, args, Discord) {
         
         let channel = msg.channel;

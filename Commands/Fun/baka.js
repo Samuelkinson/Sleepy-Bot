@@ -6,6 +6,11 @@ module.exports = {
     permissions: [],
     cooldown: 0,
     description: 'Gif a chamar alguem de estúpido 😴',
+    premium: false,
+    premiumguild: false, 
+    owner: false,
+    
+   
     execute(Client, msg, args, Discord) {
 
     superagent.get('https://nekos.life/api/v2/img/baka')
