@@ -12,8 +12,8 @@ module.exports = async (Discord, Client, msg, categories, Prefix) => {
         .setColor('PURPLE')
         .setTitle('Comandos de diversão')
         .setThumbnail(Client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 }))
-        .addField(`🥳**${categories[1].name}**`, categories[1].value)
-        .addField(`**Shortcuts**` ,`${Prefix}f "a" or "4"` )
+        .addField(`🥳**${categories[2].name}**`, categories[2].value)
+        .addField(`Atalhos` ,`${Prefix}f "a" or "2"` )
         .setFooter({
             text:`Para mais info usa ${Prefix}help <Comando>`
         })

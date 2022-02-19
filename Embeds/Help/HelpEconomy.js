@@ -2,22 +2,22 @@ const DefaultPrefix = require('../../config.json').prefix
 const GuildSchema = require('../../Schemas/Guild-Schema')
 
 module.exports = async (Discord, Client, msg, categories, Prefix) => {
-    
+   
 
     let data = await GuildSchema.findOne({ GuildID: msg.guild.id })
     if (data) Prefix = data.prefix
     else Prefix = DefaultPrefix
+   
 
-    let HelpSearch = new Discord.MessageEmbed()
-        .setColor('PURPLE')
-        .setTitle('Comandos de procura')
+    let HelpEconomy = new Discord.MessageEmbed()
+        .setColor('#5d8aa8')
+        .setTitle('Comandos de economia')
         .setThumbnail(Client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 }))
-        .addField(`🔎**${categories[4].name}**`, categories[4].value)
-        .addField(`Atalhos` ,`${Prefix}h "s" or "5"` )
+        .addField(`💰**${categories[1].name}**`, categories[1].value)
+        .addField(`Atalhos` ,`${Prefix}h "a" or "6"` )
         .setFooter({
             text:`Para mais info usa ${Prefix}help <Comando>`
         })
 
-    return msg.channel.send({ embeds: [HelpSearch] }).then(msg.delete());
-
+    return msg.channel.send({ embeds: [HelpEconomy] }).then(msg.delete());
 }

@@ -4,10 +4,10 @@ module.exports = async (Discord, Client, msg, categories, Prefix) => {
         .setTitle(`Commandos do SleepyBot`)
         .setThumbnail(Client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 }))
         .addField('**Prefixo**', `Prefixo do bot é: \`${Prefix}\``)
-        .addField('**Páginas**', `\`1.Informação do SleepyBot\` \n \`2.Utility\` \n \`3.Voz\` \n  \`4.Diversão\` \n \`5.Admin\` \n \`6.Procura\``)
-        .addField('**Ajuda na Navegação**', `Use ${Prefix}h "page"`)
+        .addField('**Páginas**', `\`1.Admin\` \n \`2.Diversão\` \n \`3.Utilidade\` \n  \`4.Voz\` \n \`5.Procura\` \n \`6.Economia\``)
+        .addField('**Ajuda na Navegação**', `Use ${Prefix}h "pág."`)
         .setFooter({
-            text:`Usage Syntax: <required> [optional]`
+            text:`Sintaxe de uso: <obrigatório> [opcional] `
         })
 
     return msg.channel.send({ embeds: [HelpInfo] }).then(msg.delete());

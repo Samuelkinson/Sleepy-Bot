@@ -11,8 +11,8 @@ module.exports = async (Discord, Client, msg, categories, Prefix) => {
         .setColor('ORANGE')
         .setTitle('Comandos de Utility do SleepyBot')
         .setThumbnail(Client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 }))
-        .addField(`❓` + categories[3].name, categories[3].value)
-        .addField(`**Shortcuts**` ,`${Prefix}h "u" or "2"` )
+        .addField(`❓` + categories[5].name, categories[5].value)
+        .addField(`Atalhos` ,`${Prefix}h "u" or "3"` )
         .setFooter({
             text:`Para mais info usa ${Prefix}help <Comando>`
         })
