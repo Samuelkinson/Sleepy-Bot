@@ -1,43 +1,52 @@
-const SleepyCoinsSchema = require('../../Schemas/SleepyCoins-Shema')
+const SleepyCoinsSchema = require("../../Schemas/SleepyCoins-Shema");
 
 module.exports = {
-    name: 'remove' ,
-    aliases: [],
-    permissions: [],
-    cooldown: 0,
-    description: '',
-    premium: false,
-    premiumguild: false,
-    owner: true,
-    async execute(Client, msg, args, Discord) {
+  name: "remove",
+  aliases: [],
+  permissions: [],
+  cooldown: 0,
+  description: `Tira Sleepy's 😴`,
+  premium: false,
+  premiumguild: false,
+  owner: true,
+  async execute(Client, msg, args, Discord) {
+    const member = msg.mentions.members.first();
+    if (!member) return msg.channel.send("Preciso de um membro!");
+    if (!args[1]) return msg.channel.send(`Preciso de Sleepy's 😴`);
+    if (isNaN(args[1]))
+      return msg.channel.send(`Sleepy's 😴 têm de ser um número`);
+    newcoins = parseInt(args[1]);
 
-        const member = msg.mentions.members.first()
-        newcoins = parseInt(args[1])
-        if(!member) return msg.channel.send('Preciso de um membro!')
-        if(!args[1]) return msg.channel.send('Preciso de Sleepy Coins😴')
-
-        SleepyCoinsSchema.findOne({
+    SleepyCoinsSchema.findOne(
+      {
+        id: member.id,
+      },
+      async (err, data) => {
+        if (data) {
+          SleepyCoins = data.SleepyCoins - newcoins;
+          data.delete();
+          let newData = new SleepyCoinsSchema({
+            Nickname: member.user.username,
             id: member.id,
-        }, async(err, data) =>{
-            if (data) { 
-                SleepyCoins = data.SleepyCoins - newcoins
-                data.delete();
-                let newData = new SleepyCoinsSchema({
-                    id: member.id,
-                    SleepyCoins: SleepyCoins,
-                    })
-                newData.save();
-    
-                return msg.channel.send(`Foram removidas \`${newcoins}\` Sleepy Coins😴 a \`${member.user.username}\``)
-               
-            } else {
-                let newData = new SleepyCoinsSchema({
-                    id: member.id,
-                    SleepyCoins: newcoins
-                })
-                newData.save();
-                return msg.channel.send(`Foram removidas \`${newcoins}\` Sleepy Coins😴 a \`${member.user.username}\``)
+            SleepyCoins: SleepyCoins,
+          });
+          newData.save();
+
+          return msg.channel.send(
+            `Foram removidas \`${newcoins}\` Sleepy's 😴 a \`${member.user.username}\``
+          );
+        } else {
+          let newData = new SleepyCoinsSchema({
+            Nickname: member.user.username,
+            id: member.id,
+            SleepyCoins: newcoins,
+          });
+          newData.save();
+          return msg.channel.send(
+            `Foram removidas \`${newcoins}\` Sleepy's 😴 a \`${member.user.username}\``
+          );
         }
-        })
-    }
-}
+      }
+    );
+  },
+};

@@ -1,10 +1,12 @@
+const timedisplay = require('../../Resources/timedisplay')
+
 module.exports = (msg, time_left, command, Discord) =>{
     let embed = new Discord.MessageEmbed()
-    .setTitle('Tem calma')
-    .setDescription(`Vai lá com mais calma o comando \`${command.name}\` tem cooldown de \`${command.cooldown}s\` \n daqui a **${time_left.toFixed(0)} segundos ** podes voltar a usá-lo!`)
-    .setColor('#000')
+    .setTitle('Relaxa')
+    .setDescription(`O comando \`${command.name}\` tem cooldown de \`${timedisplay.time(command.cooldown)}\` \n daqui a **${timedisplay.time(time_left.toFixed(0))}** podes voltar a usá-lo!`)
+    .setColor('#2f3136')
 
-    return msg.reply({embeds: [embed]})
+    return msg.channel.send({embeds: [embed]})
 
 }
 

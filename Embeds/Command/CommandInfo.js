@@ -9,7 +9,7 @@ module.exports = (msg, Discord, command, Client) => {
             { name: '⌚Cooldown', value: `\`${command.cooldown} Segundos\`` },
             { name: '👑Permissões', value: !command.permissions.length ? `\`Este comando não necessita de permissões para ser usado\`` : `\`${command.permissions.join(', ')}\`` },
         )
-        .setColor('GREEN')
+        .setColor('#2f3136')
         .setFooter({
             text:`${prefix}<comando> [opcional]`
         })

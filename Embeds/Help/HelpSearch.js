@@ -9,7 +9,7 @@ module.exports = async (Discord, Client, msg, categories, Prefix) => {
     else Prefix = DefaultPrefix
 
     let HelpSearch = new Discord.MessageEmbed()
-        .setColor('PURPLE')
+        .setColor('#37dc0c')
         .setTitle('Comandos de procura')
         .setThumbnail(Client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 }))
         .addField(`🔎**${categories[4].name}**`, categories[4].value)

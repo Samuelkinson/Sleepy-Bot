@@ -31,3 +31,14 @@ const validPermissions = [  //Array of premissions
         "MANAGE_WEBHOOKS",
         "MANAGE_EMOJIS",
     ]
+
+Discord Embed Color[
+    Look like no color: #2f3136
+    Admin: #ffff00
+    Economy: #5d8aa8
+    Fun: PURPLE
+    Owners: ?
+    Search: #37dc0c
+    Utility: ORANGE
+    Voice: ?
+]
