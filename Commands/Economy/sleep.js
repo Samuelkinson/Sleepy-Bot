@@ -23,9 +23,7 @@ module.exports = {
     ];
     const locations = Math.floor(Math.random() * sleeplocations.length);
     const newcoins = Math.floor(Math.random() * 200) + 1;
-    msg.channel.send(
-      `Adormeceste ${sleeplocations[locations]} e recebeste \`${newcoins}\` Sleepy's 😴`
-    );
+    msg.channel.send(`Adormeceste ${sleeplocations[locations]} e recebeste \`${newcoins}\` Sleepy's 😴`);
 
     SleepyCoinsSchema.findOne(
       {
@@ -33,14 +31,9 @@ module.exports = {
       },
       async (err, data) => {
         if (data) {
-          SleepyCoins = data.SleepyCoins + newcoins;
-          data.delete();
-          let newData = new SleepyCoinsSchema({
-            Nickname: msg.author.username,
-            id: msg.author.id,
-            SleepyCoins: SleepyCoins,
-          });
-          newData.save();
+          data.Nickname = msg.author.username,
+          data.SleepyCoins =  data.SleepyCoins  + newcoins;
+          await data.save()
         } else {
           let newData = new SleepyCoinsSchema({
             Nickname: msg.author.username,

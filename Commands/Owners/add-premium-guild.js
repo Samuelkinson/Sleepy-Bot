@@ -9,14 +9,13 @@ module.exports = {
   description: "?premiumguild <msg.guild.id> 2022-18-03",
   premium: false,
   premiumguild: false,
-  owner: false,
+  owner: true,
   async execute(Client, msg, args, Discord) {
-    if (!args[0]) return msg.channel.sends(`Preciso de um guild id!`);
-    if (!Client.guilds.cache.has(args[0]))
-      return msg.channel.sends(`Guild id inválido!`);
+    if (!args[0]) return msg.channel.send(`Preciso de um guild id!`);
+    if (!Client.guilds.cache.has(args[0])) return msg.channel.send(`Guild id inválido!`);
 
     PremiumGuildSchema.findOne({ Guild: args[0] }, async (err, data) => {
-      if (data) data.delete();
+      if (data) data.delete(); //So that you can be able to change the Expire date!
 
       if (args[1]) {
         const Expire = day(args[1]).valueOf();

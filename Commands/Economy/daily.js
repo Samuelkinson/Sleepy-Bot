@@ -19,14 +19,8 @@ module.exports = {
       },
       async (err, data) => {
         if (data) {
-          SleepyCoins = data.SleepyCoins + newcoins;
-          data.delete();
-          let newData = new SleepyCoinsSchema({
-            Nickname: msg.author.username,
-            id: msg.author.id,
-            SleepyCoins: SleepyCoins,
-          });
-          newData.save();
+          data.SleepyCoins = data.SleepyCoins + newcoins;
+          await data.save()
         } else {
           let newData = new SleepyCoinsSchema({
             Nickname: msg.author.username,

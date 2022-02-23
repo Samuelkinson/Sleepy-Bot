@@ -19,14 +19,9 @@ module.exports = {
         User: member.id,
       },
       async (err, data) => {
-        if (!data)
-          return msg.channel
-            .send(`\`${member.user.username}\` não tinha owner!`)
-            .then(msg.delete());
+        if (!data) return msg.channel.send(`\`${member.user.username}\` não tinha owner!`).then(msg.delete());
         data.delete();
-        msg.channel
-          .send(`\`${member.user.username}\` já não tem owner`)
-          .then(msg.delete());
+        msg.channel.send(`\`${member.user.username}\` já não tem owner`).then(msg.delete());
       }
     );
   },

@@ -12,36 +12,28 @@ module.exports = {
     description: `Muda o prefixo do servidor 😴`,
     async execute(Client, msg, args, Discord) {
 
-        const data = await GuildSchema.findOne({
-            GuildID: msg.guild.id
-        });
-        
-        if (!args[0]) return msg.channel.send('You must provide a **new prefix**!');
-        if (args[0].length > 5) return msg.channel.send('Your new prefix must be under \`5\` characters!')
 
-        if (data) {
-            await GuildSchema.findOneAndRemove({
+        if (!args[0]) return msg.channel.send(' Preciso de um **novo prefixo**! ');
+        if (args[0].length > 5) return msg.channel.send('O novo prefixo deve ser menor do que \`5\` caracteres! ')
+        GuildSchema.findOne(
+            {
                 GuildID: msg.guild.id
-            })
-            
-            msg.channel.send(`The new prefix is now **\`${args[0]}\`**`);
-    
-            let newData = new GuildSchema({
-                guildName: msg.guild.name,
-                GuildID: msg.guild.id,
-                prefix:  args[0].toLowerCase(), 
-                
-            })
-            newData.save();
-        } else if (!data) {
-            msg.channel.send(`The new prefix is now **\`${args[0]}\`**`);
-    
-            let newData = new GuildSchema({
-                guildName: msg.guild.name,
-                GuildID: msg.guild.id,
-                prefix: args[0].toLowerCase(), 
-            })
-            newData.save();
-        }
+            }, async(err, data) => {
+                if (data) {
+                    msg.channel.send(`O novo prefixo é **\`${args[0]}\`**`);
+                    data.guildName = msg.guild.name,
+                    data.prefix = args[0].toLowerCase(),    
+                    data.save();    
+                } else if (!data) {
+                    msg.channel.send(`O novo prefixo é  **\`${args[0]}\`**`);
+                    let newData = new GuildSchema({
+                        guildName: msg.guild.name,
+                        GuildID: msg.guild.id,
+                        prefix: args[0].toLowerCase(), 
+                    })
+                    newData.save();
+                }
+            });
+       
     }
 }

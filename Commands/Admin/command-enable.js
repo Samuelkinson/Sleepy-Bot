@@ -15,7 +15,6 @@ module.exports = {
             if(err) throw err;
             if(data) {
               if(data.Cmds.includes(cmd)) {
-                  let commandNumber;
 
                   for (let i = 0; i < data.Cmds.length; i++) {
                       if(data.Cmds[i] === cmd) data.Cmds.splice(i, 1)

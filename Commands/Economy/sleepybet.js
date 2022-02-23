@@ -16,29 +16,24 @@ module.exports = {
       return msg.channel.send(`Quantia tem de ser um número!`);
 
     newcoins = parseInt(args[0]);
+    wincoins = newcoins * 2
     SleepyCoinsSchema.findOne(
       {
         id: msg.author.id,
       },
       async (err, data) => {
-        if (!data) return msg.channel.send(`Não tens Sleppy's😴`);
         if (data) {
-          if (data.SleepyCoins < newcoins)
-            return msg.channel.send(
-              `Apenas tens \`${data.SleepyCoins}\` Sleepy's😴 `
-            );
+          if (data.SleepyCoins < newcoins) return msg.channel.send(`Só tens \`${data.SleepyCoins}\` Sleepy's😴 `);
           if (win === 1) {
-            SleepyCoins = data.SleepyCoins + newcoins * 2;
+            data.SleepyCoins =  data.SleepyCoins  + wincoins;
+            msg.channel.send(`Ganhaste ${wincoins} Sleepy's 😴 `)
           } else {
-            SleepyCoins = data.SleepyCoins - newcoins;
+            data.SleepyCoins =  data.SleepyCoins  - newcoins;
+            msg.channel.send(`Perdeste ${newcoins} Sleepy's 😴 `)
           }
-          data.delete();
-          let newData = new SleepyCoinsSchema({
-            Nickname: msg.author.username,
-            id: msg.author.id,
-            SleepyCoins: SleepyCoins,
-          });
-          newData.save();
+         data.save()
+        } else{
+          msg.channel.send(`Não tens Sleppy's😴`);
         }
       }
     );
