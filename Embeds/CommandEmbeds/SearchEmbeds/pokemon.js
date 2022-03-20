@@ -13,7 +13,7 @@ module.exports = (Client, msg, args, Discord, pokeData) => {
       }) 
       pokeData.stats.forEach(stat => embed.addField(`🎴Estatística:`, `**${capitalize.Capitalize(stat.stat.name.toString())}**: ${stat.base_stat.toString()}`, true)) 
       pokeData.abilities.forEach(abilities => embed.addField('📚Habilidades:', abilities.ability.name, true))  
-       embed.addField('🐘Peso:', `${pokeData.weight.toString()}Kg`, false) 
+      embed.addField('🐘Peso:', `${pokeData.weight.toString()}Kg`, false) 
       embed.addField('🦒Altura:',  `${pokeData.height.toString()} metros`, false)
       pokeData.types.forEach(poketype =>{embed.addField('🩸Tipo:', capitalize.Capitalize(poketype.type.name), true)}) 
       msg.channel.send({embeds : [embed]})
