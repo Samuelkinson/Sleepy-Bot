@@ -1,5 +1,6 @@
 const SleepyCoinsSchema = require("../../Schemas/SleepyCoins-Shema");
 const SleepyCoinsEmbed = require("../../Embeds/CommandEmbeds/Economy/sleepycoins");
+const Emojis = require('../../Resources/Emojis.json').Emojis;
 
 module.exports = {
   name: `sleepy's`,
@@ -11,6 +12,7 @@ module.exports = {
   premiumguild: false,
   owner: false,
   async execute(Client, msg, args, Discord) {
+    const SleepyEmoji = Client.emojis.cache.get(Emojis.SleepyCoin);
     const member = msg.mentions.members.first() || msg.member;
     if (!member) return msg.channel.send("Preciso de um membro!");
 
@@ -30,7 +32,7 @@ module.exports = {
           });
           newData.save();
           return msg.channel.send(
-            `\`${member.user.username}\` não tinhas Sleepy's 😴, foram-lhe adicionadas \`50\``
+            `\`${member.user.username}\` não tinha ${SleepyEmoji}, foram-lhe adicionadas \`50\``
           );
         }
       }

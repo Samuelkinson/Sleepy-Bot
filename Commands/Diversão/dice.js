@@ -15,7 +15,7 @@ module.exports = {
     }
 
     var embed = new Discord.MessageEmbed()
-      .setDescription(":game_die: O dado rolou " + `${dice()}` + "! :game_die:")
+      .setDescription("🎲 O dado rolou " + `${dice()}` + "! 🎲")
       .setColor("#ff748c");
 
     return msg.channel.send({ embeds: [embed] }).then(msg.delete());

@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 const FACEIT_API_KEY = require("../../config.json").faceitapikey;
-const faceitembed = require("../../Embeds/CommandEmbeds/SearchEmbeds/faceit");
+const faceitembed = require("../../Embeds/CommandEmbeds/SearchEmbeds/Faceit/faceit");
+
 module.exports = {
   name: "faceit",
   aliases: [],

@@ -12,7 +12,8 @@ module.exports = {
   owner: false,
 
   execute(Client, msg, args, Discord) {
-    if (args[0]) return msg.channel.send({ content: `Usa ${Prefix}nitro` });
-    return nitro(Client, msg, args, Discord);
+
+      nitro(Client, msg, args, Discord);
+      
   },
 };

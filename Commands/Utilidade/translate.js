@@ -3,10 +3,10 @@ const Prefix = require("../../config.json").prefix;
 
 module.exports = {
   name: "tt",
-  aliases: [],
+  aliases: ['traduz'],
   permissions: [],
   cooldown: 0,
-  description: `Translates to all languages `,
+  description: `Traduz todas as linguagens`,
   premium: false,
   premiumguild: false,
   owner: false,
@@ -14,7 +14,7 @@ module.exports = {
     try {
       if (args.length < 2) {
         msg.reply(
-          `Wrong format: An example would be ${Prefix}tt korean "any-language-text"`
+          `Formato errado: Um exemplo seria ${Prefix}tt korean "texto-em-qualquer-idioma"` 
         );
       } else {
         let translateTo = args[0].toLowerCase(); //Language to Translate to
@@ -25,13 +25,11 @@ module.exports = {
             msg.channel.send(res);
           })
           .catch((err) => {
-            msg.channel.send("An error has occured");
+            msg.channel.send("Ocorreu um erro!");
           });
       }
     } catch (err) {
-      return msg.channel.send({
-        content: `Try ${Prefix}tt korean "any-language-text"`,
-      });
+      return msg.channel.send({content: `Tenta ${Prefix}tt korean "any-language-text"`});
     }
   },
 };

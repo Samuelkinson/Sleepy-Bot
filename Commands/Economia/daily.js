@@ -1,4 +1,5 @@
 const SleepyCoinsSchema = require("../../Schemas/SleepyCoins-Shema");
+const Emojis = require('../../Resources/Emojis.json').Emojis
 
 module.exports = {
   name: "daily",
@@ -10,8 +11,9 @@ module.exports = {
   premiumguild: false,
   owner: false,
   async execute(Client, msg, args, Discord) {
+    const SleepyCoins = Client.emojis.cache.get(Emojis.SleepyCoin);  
     const newcoins = Math.floor(Math.random() * 1000) + 1;
-    msg.channel.send(`Recebeste \`${newcoins}\` Sleepy's 😴, volta amanhã!`);
+    msg.channel.send(`Recebeste \`${newcoins}\` ${SleepyCoins}, volta amanhã!`);
 
     SleepyCoinsSchema.findOne(
       {

@@ -39,7 +39,7 @@ module.exports = {
           covid19Leaderboard(Discord, msg, c); //COVID-19 LeaderBoard Embed
         })
         .catch(function (error) {});
-    } else {
+    }  else {
       let m = msg.content.toLowerCase().substring(1).split(" ");
       m.shift();
       options.url = "https://covid-193.p.rapidapi.com/statistics";
@@ -57,7 +57,9 @@ module.exports = {
             msg.channel.send(`Couldn't find that country`);
           }
         })
-        .catch(function (error) {});
+        .catch(function (error) {
+          console.log(error)
+        });
     }
   },
 };

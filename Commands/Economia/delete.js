@@ -8,7 +8,7 @@ module.exports = {
   description: `Elimina a economia de Sleepy's 😴!`,
   premium: false,
   premiumguild: false,
-  owner: false,
+  owner: true,
   async execute(Client, msg, args, Discord) {
     const member =  msg.member;
     if (!member) return msg.channel.send("Preciso de um membro!");

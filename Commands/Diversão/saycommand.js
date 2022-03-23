@@ -2,7 +2,7 @@ const Prefix = require("../../Config.json").prefix;
 
 module.exports = {
   name: "echo",
-  aliases: ["say"],
+  aliases: ["say", 'diz'],
   permissions: [],
   cooldown: 5,
   description: "Faz o bot dizer algo com embed😴",
@@ -13,7 +13,7 @@ module.exports = {
   async execute(Client, msg, args, Discord) {
     const messageToSay = args.join(" ");
     if (!messageToSay[0])
-      return msg.channel.send({ content: `Usa ${Prefix}echo "algo"` });
+      return msg.channel.send({ content: `Escreve "algo"` });
 
     const sayEmbed = new Discord.MessageEmbed()
       .setColor("#ff748c")
