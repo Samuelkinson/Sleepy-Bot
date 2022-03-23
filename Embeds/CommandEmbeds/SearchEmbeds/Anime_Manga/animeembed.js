@@ -31,7 +31,7 @@ module.exports = (Client, msg, args, Discord) =>{
                 .addField('⏳ Duração:', `${mat.data[0].attributes.episodeLength ? mat.data[0].attributes.episodeLength: "N/A"}`, true)
                 .addField('⭐Ranking:', `${mat.data[0].attributes.ratingRank}`, true)
                 .addField('⭐Média do Rating:', `${mat.data[0].attributes.averageRating}`, true)
-                .addField('🔞Age Rating/NSFW', `${mat.data[0].attributes.ageRating}/${mat.data[0].attributes.nsfw}`, true) 
+                .addField('🔞Classificação etária/NSFW', `${mat.data[0].attributes.ageRating}/${mat.data[0].attributes.nsfw}`, true) 
                 .setFooter({
                     text:`Comando Patrocinado por @SleepyBot 😴`, 
                     iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
