@@ -13,7 +13,7 @@ module.exports = async (Discord, Client, msg, categories, Prefix) => {
         .setColor('#5d8aa8')
         .setTitle('Comandos de economia')
         .setThumbnail(Client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 }))
-        .addField(`💰**${categories[1].name}**`, categories[1].value)
+        .addField(`💰**${categories[2].name}**`, categories[2].value)
         .addField(`Atalhos` ,`${Prefix}h "a" or "6"` )
         .setFooter({
             text:`Para mais info usa ${Prefix}help <Comando>`
