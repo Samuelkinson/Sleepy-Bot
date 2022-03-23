@@ -30,7 +30,7 @@
   Sleepy Bot😴💤
 </p>
 
-## 📚Table of Contents
+## 📚Tabela de Conteúdos
 
 - [Introdução](#introdução)
 - [Recursos](#recursos)
@@ -66,7 +66,7 @@ Sleepy Bot é um bot de discord open source que está constantemente a receber a
 
 ## 👩‍💻Instalação
 
-> Para executar este bot, você precisará dos seguintes programa: 
+> Para executar este bot, você precisará dos seguintes programas: 
 
 * [Node.js](https://nodejs.org/en/) v16+
 * [Discord.js](https://discord.js.org/#/) v13+
