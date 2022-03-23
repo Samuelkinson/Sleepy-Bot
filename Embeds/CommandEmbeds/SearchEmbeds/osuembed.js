@@ -1,10 +1,15 @@
 const time = require('../../../Resources/timedisplay')
+const emojis = require('../../../Resources/Emojis.json').Osu 
 
 module.exports = (Client, msg, Discord, osuUser) =>{
 
+    const OsuA = Client.emojis.cache.get(emojis.OsuA); const OsuS = Client.emojis.cache.get(emojis.OsuS);
+    const OsuSS = Client.emojis.cache.get(emojis.OsuSS); const OsuSH = Client.emojis.cache.get(emojis.OsuSH);
+    const OsuSSH = Client.emojis.cache.get(emojis.OsuSSH);
+
     const embed = new Discord.MessageEmbed()
     .setColor('#37dc0c')
-    .setTitle(`:flag_${osuUser.country.toLowerCase()}: **${osuUser.name}** Osu! profile `)
+    .setTitle(`:flag_${osuUser.country.toLowerCase()}: **${osuUser.name}** Osu! Perfil!`)
     .setThumbnail(`http://s.ppy.sh/a/${osuUser.id}`)
     .setURL(`https://osu.ppy.sh/users/${osuUser.id}`)
     .addFields(
@@ -27,7 +32,7 @@ module.exports = (Client, msg, Discord, osuUser) =>{
          **👩‍💻Competitivo:** \`${osuUser.scores.ranked}\`
          **👨‍💻Total:** \`${osuUser.scores.total}\``, false)
     
-    .addField('💥Contagem de pontuações:', ` **SSH:**  \`${osuUser.counts.SSH} \` **SS:**  \`${osuUser.counts.SS} \`**SH:**  \`${osuUser.counts.SH} \` **S:**  \`${osuUser.counts.S} \` **A:**  \`${osuUser.counts.A} \``, false)
+    .addField('💥Contagem de pontuações:', ` ${OsuSSH}  \`${osuUser.counts.SSH} \` ${OsuSS}  \`${osuUser.counts.SS} \` ${OsuSH}  \`${osuUser.counts.SH} \` ${OsuS}  \`${osuUser.counts.S} \` ${OsuA}  \`${osuUser.counts.A} \``, false)
     .setFooter({
         text:`Comando Patrocinado por @SleepyBot 😴`, 
         iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
