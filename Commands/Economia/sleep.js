@@ -1,8 +1,9 @@
 const SleepyCoinsSchema = require("../../Schemas/SleepyCoins-Shema");
+const locations = require('../../Embeds/CommandEmbeds/Economy/LocationRandom')
 
 module.exports = {
   name: "sleep",
-  aliases: [],
+  aliases: ['dormir', 'mimir'],
   permissions: [],
   cooldown: 0,
   description: `Dorme para ganhar Sleepy's 😴`,
@@ -10,20 +11,9 @@ module.exports = {
   premiumguild: false,
   owner: false,
   async execute(Client, msg, args, Discord) {
-    const sleeplocations = [
-      "na cama",
-      "no sofá",
-      "no carro",
-      "no chão",
-      "na mesa da cozinha",
-      "na rua",
-      "num banco de um parque",
-      "na prisão",
-      "numa cadeira gamer",
-    ];
-    const locations = Math.floor(Math.random() * sleeplocations.length);
+    
     const newcoins = Math.floor(Math.random() * 200) + 1;
-    msg.channel.send(`Adormeceste ${sleeplocations[locations]} e recebeste \`${newcoins}\` Sleepy's 😴`);
+    msg.channel.send(`Adormeceste ${locations()} e recebeste \`${newcoins}\` Sleepy's 😴`);
 
     SleepyCoinsSchema.findOne(
       {
