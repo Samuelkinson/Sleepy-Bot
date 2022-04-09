@@ -1,4 +1,4 @@
-const SleepyCoinsSchema = require("../../Schemas/SleepyCoins-Shema");
+const InventorySchema = require("../../Schemas/Inventory-Schema");
 
 module.exports = {
   name: "delete",
@@ -13,16 +13,16 @@ module.exports = {
     const member =  msg.member;
     if (!member) return msg.channel.send("Preciso de um membro!");
 
-    SleepyCoinsSchema.findOne(
+    InventorySchema.findOne(
       {
         id: member.id,
       },
       async (err, data) => {
         if (data) {
           data.delete();
-          return msg.channel.send(`Apaguei os Sleepy's 😴 de ${member.user.username}`);
+          return msg.channel.send(`Apaguei a tua economia toda ${member.user.username}!`);
         } else {
-          return msg.channel.send(`Nunca tiveste Sleepy's 😴`);
+          return msg.channel.send(`Nunca tiveste economia 😴`);
         }
       }
     );

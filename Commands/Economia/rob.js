@@ -1,4 +1,4 @@
-const SleepyCoinsSchema = require("../../Schemas/SleepyCoins-Shema");
+const InventorySchema = require("../../Schemas/Inventory-Schema");
 const failedmessage = require('../../Embeds/CommandEmbeds/Economy/failedrobembed')
 const successfulmessage = require('../../Embeds/CommandEmbeds/Economy/successfulrobembed')
 const Emojis = require('../../Resources/Emojis.json').Emojis
@@ -19,10 +19,10 @@ module.exports = {
         if(!target) return msg.channel.send("Preciso de alguém para roubar");
 
         let theftamount = Math.floor(Math.random() * 151) + 10;
-        const win = Math.floor(Math.random() * 2);  
+        const win = 1 /* Math.floor(Math.random() * 9); */  
 
         //Remove or fail target SleepyCoins
-        SleepyCoinsSchema.findOne(
+        InventorySchema.findOne(
             {
               id: target.user.id,
             },
@@ -32,39 +32,39 @@ module.exports = {
                 if (win === 1 ) { 
                     data.SleepyCoins =  data.SleepyCoins - theftamount;
                     successfulmessage(Client, msg, Discord, target, thief, theftamount);
+                    //Add thief SleepyCoins
+                    InventorySchema.findOne(
+                      {
+                        id: thief.id,
+                      },async (err, data) => {
+                          //Add thief SleepyCoins in old data
+                          if(data){
+                              data.SleepyCoins = data.SleepyCoins + theftamount;
+                              await data.save()
+                                
+                           }else{
+                              //Add thief SleepyCoins in new data
+                              let newData = new InventorySchema({
+                                  Nickname: thief.username,
+                                  id: thief.id,
+                                  SleepyCoins: theftamount,
+                                  Inventory:{               
+                                      [`PlaceHolder`]: 0
+                                    }
+                                });
+                              newData.save();
+                            }
+                  })
                 }else{
                     //Add failed theft
                     return failedmessage(Client, msg, Discord, target, thief)
                 }
                 data.save()
-                
               } else{
                   //Add failed theft because of no data!
-                msg.channel.send(`${target} não tem ${SleepyCoins}, Sleepy Bot Police apanhou a tua fraca tentativa de roubo e estás preso!`)
+                return msg.channel.send(`${target} não tem ${SleepyCoins}, Sleepy Bot Police apanhou a tua fraca tentativa de roubo e estás preso!`)
               }
             }
           );
-
-          //Add thief SleepyCoins
-          if(win === 1){
-            SleepyCoinsSchema.findOne(
-              {
-                id: thief.id,
-              },async (err, data) => {
-                  //Add thief SleepyCoins in old data
-                  if(data){
-                      data.SleepyCoins = data.SleepyCoins + theftamount;
-                      await data.save()
-                        
-                   }else{
-                      //Add thief SleepyCoins in new data
-                      let newData = new SleepyCoinsSchema({
-                          Nickname: thief.username,
-                          id: thief.id,
-                          SleepyCoins: theftamount,
-                        });
-                      newData.save();
-                    }
-          })};
     }
 }

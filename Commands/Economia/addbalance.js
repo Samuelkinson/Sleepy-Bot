@@ -1,4 +1,4 @@
-const SleepyCoinsSchema = require("../../Schemas/SleepyCoins-Shema");
+const InventorySchema = require("../../Schemas/Inventory-Schema");
 const Emojis = require('../../Resources/Emojis.json').Emojis;
 
 
@@ -20,7 +20,7 @@ module.exports = {
     if (isNaN(args[1])) return msg.channel.send(`${SleepyEmoji} têm de ser um número`);
     newcoins = parseInt(args[1]);
 
-    SleepyCoinsSchema.findOne(
+    InventorySchema.findOne(
       {
         id: member.id,
       },
@@ -31,10 +31,13 @@ module.exports = {
           await data.save()
           return msg.channel.send(`Foram adicionadas \`${newcoins}\` ${SleepyEmoji} a \`${member.user.username}\``);
         } else {
-          let newData = new SleepyCoinsSchema({
+          let newData = new InventorySchema({
             Nickname: member.user.username,
             id: member.id,
-            SleepyCoins: newcoins,
+            SleepyCoins : newcoins,
+            Inventory:{
+                [`PlaceHolder`]: 0
+                }
           });
           newData.save();
           return msg.channel.send(`Foram adicionadas \`${newcoins}\` ${SleepyEmoji} a \`${member.user.username}\``);

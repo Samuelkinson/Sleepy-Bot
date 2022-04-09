@@ -35,7 +35,7 @@ module.exports = {
         .filter((file) => file.endsWith(".js"));
       const cmds = commands.map((command) => {
         let file = require(`../../Commands/${dir}/${command}`);
-        if (!file.name) return "No Command Name";
+        if (!file.name) return "Não existe esse comando!";
 
         let name = file.name.replace(".js", "");
         return `\`${name}\``;
@@ -44,7 +44,7 @@ module.exports = {
 
       data = {
         name: dir.toUpperCase(),
-        value: cmds.length === 0 ? "`In progress`" : cmds.join(" "),
+        value: cmds.length === 0 ? "`Em progresso!`" : cmds.join(" "),
       };
 
       categories.push(data);

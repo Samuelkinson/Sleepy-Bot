@@ -1,6 +1,6 @@
 module.exports = {
   name: "invite",
-  aliases: ["inv", "convida", "convite"],
+  aliases: ["convida", "convite"],
   permissions: ["CREATE_INSTANT_INVITE", "EMBED_LINKS", "SEND_MESSAGES"],
   cooldown: 120,
   description: "Creates an invite for the server",

@@ -1,4 +1,4 @@
-const SleepyCoinsSchema = require("../../Schemas/SleepyCoins-Shema");
+const InventorySchema = require('../../Schemas/Inventory-Schema');
 const Emojis = require('../../Resources/Emojis.json').Emojis
 
 module.exports = {
@@ -11,6 +11,7 @@ module.exports = {
   premiumguild: false,
   owner: false,
   async execute(Client, msg, args, Discord) {
+    
     const SleepyCoins = Client.emojis.cache.get(Emojis.SleepyCoin);  
     const win = Math.floor(Math.random() * 2);
     if (!args[0]) return msg.channel.send(`Preciso de Sleepy's 😴`);
@@ -19,7 +20,7 @@ module.exports = {
 
     newcoins = parseInt(args[0]);
     wincoins = newcoins * 2
-    SleepyCoinsSchema.findOne(
+    InventorySchema.findOne(
       {
         id: msg.author.id,
       },

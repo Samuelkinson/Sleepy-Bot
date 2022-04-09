@@ -1,4 +1,4 @@
-const SleepyCoinsSchema = require("../../Schemas/SleepyCoins-Shema");
+/* const SleepyCoinsSchema = require("../../Schemas/SleepyCoins-Shema");
 const SleepyCoinsEmbed = require("../../Embeds/CommandEmbeds/Economy/sleepycoins");
 const Emojis = require('../../Resources/Emojis.json').Emojis;
 
@@ -12,6 +12,7 @@ module.exports = {
   premiumguild: false,
   owner: false,
   async execute(Client, msg, args, Discord) {
+    
     const SleepyEmoji = Client.emojis.cache.get(Emojis.SleepyCoin);
     const member = msg.mentions.members.first() || msg.member;
     if (!member) return msg.channel.send("Preciso de um membro!");
@@ -39,3 +40,4 @@ module.exports = {
     );
   },
 };
+ */

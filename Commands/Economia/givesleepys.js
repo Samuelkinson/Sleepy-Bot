@@ -1,5 +1,6 @@
-const SleepyCoinsSchema = require("../../Schemas/SleepyCoins-Shema");
+const InventorySchema = require("../../Schemas/Inventory-Schema");
 const Emojis = require('../../Resources/Emojis.json').Emojis
+
 module.exports = {
   name: "give",
   aliases: [],
@@ -19,7 +20,7 @@ module.exports = {
     if(msg.author.id === member.id) return msg.channel.send(`Não podes oferecer Sleepy's${SleepyCoins} a ti mesmo`); 
     givecoins = parseInt(args[1]);
 
-    SleepyCoinsSchema.findOne(
+    InventorySchema.findOne(
       {
         id: msg.author.id,
       },
@@ -29,7 +30,7 @@ module.exports = {
           //Remove giver coins
           data.SleepyCoins = data.SleepyCoins - givecoins;
           await data.save()  
-          SleepyCoinsSchema.findOne(
+          InventorySchema.findOne(
             {
               id: member.id,
             },
@@ -40,10 +41,13 @@ module.exports = {
                 await data.save()
                 return msg.channel.send(`\`${member.user.username}\` recebeu \`${givecoins}\`${SleepyCoins}`);
               } else {
-                let newData = new SleepyCoinsSchema({
+                let newData = new InventorySchema({
                   Nickname: member.user.username,
                   id: member.id,
                   SleepyCoins: givecoins,
+                  Inventory:{
+                    [`PlaceHolder`]: 0,
+                    }
                 });
                 newData.save();
                 return msg.channel.send(`\`${member.user.username}\` recebeu \`${givecoins}\`${SleepyCoins}`);

@@ -1,4 +1,4 @@
-const SleepyCoinsSchema = require("../../Schemas/SleepyCoins-Shema");
+const InventorySchema = require('../../Schemas/Inventory-Schema');
 const locations = require('../../Embeds/CommandEmbeds/Economy/LocationRandom')
 
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
     const newcoins = Math.floor(Math.random() * 200) + 1;
     msg.channel.send(`Adormeceste ${locations()} e recebeste \`${newcoins}\` Sleepy's 😴`);
 
-    SleepyCoinsSchema.findOne(
+    InventorySchema.findOne(
       {
         id: msg.author.id,
       },
@@ -25,10 +25,13 @@ module.exports = {
           data.SleepyCoins =  data.SleepyCoins  + newcoins;
           await data.save()
         } else {
-          let newData = new SleepyCoinsSchema({
+          let newData = new InventorySchema({
             Nickname: msg.author.username,
             id: msg.author.id,
             SleepyCoins: newcoins,
+            Inventory:{
+              [`PlaceHolder`]: 0
+              }
           });
           newData.save();
         }
