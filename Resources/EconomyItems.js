@@ -29,5 +29,11 @@ module.exports = [
         emoji: "955853745915326505",
         pct: 10
     }, 
+    {
+        item: 'Hachi-Roku',
+        price: 100,
+        emoji: "955853745915326505",
+        pct: 10
+    },
 
 ];

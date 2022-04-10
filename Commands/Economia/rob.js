@@ -19,7 +19,7 @@ module.exports = {
         if(!target) return msg.channel.send("Preciso de alguém para roubar");
 
         let theftamount = Math.floor(Math.random() * 151) + 10;
-        const win = 1 /* Math.floor(Math.random() * 9); */  
+        const win = Math.floor(Math.random() * 9);   
 
         //Remove or fail target SleepyCoins
         InventorySchema.findOne(
