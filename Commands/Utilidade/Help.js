@@ -34,10 +34,10 @@ module.exports = {
         .readdirSync(`./commands/${dir}`)
         .filter((file) => file.endsWith(".js"));
       const cmds = commands.map((command) => {
-        let file = require(`../../Commands/${dir}/${command}`);
-        if (!file.name) return "Não existe esse comando!";
+        let file = require(`../../Commands/${dir}/${command}`); // Gets the file
+        if (!file.name) return "Não existe esse comando!"; // If the command doesn't have a name, it will return this message
 
-        let name = file.name.replace(".js", "");
+        let name = file.name.replace(".js", ""); // Gets the name of every command
         return `\`${name}\``;
       });
       let data = new Object();
@@ -58,8 +58,8 @@ module.exports = {
       const command =
         Client.commands.get(cmd) ||
         Client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
+        console.log(command);
       if (command) return CommandInfo(msg, Discord, command, Client);
-
       if (cmd === "admin" || cmd === "a" || cmd === "1") return HelpAdmin(Discord, Client, msg, categories, Prefix);
       else if (cmd === "diversão" || cmd === "d" || cmd === "2") return HelpFun(Discord, Client, msg, categories, Prefix);
       else if (cmd === "utilidade" || cmd === "u" || cmd === "3") return HelpUtility(Discord, Client, msg, categories, Prefix);

@@ -26,7 +26,6 @@ module.exports = {
       
     const OriginalitemPrice = items.find((val) => val.item.toLowerCase() === itemtosell).price
     const itemPrice = OriginalitemPrice - (OriginalitemPrice * 0.10) 
-    console.log(itemPrice)
 
     InventorySchema.findOne({
         id: msg.author.id,

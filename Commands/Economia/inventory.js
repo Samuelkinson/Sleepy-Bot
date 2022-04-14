@@ -1,6 +1,8 @@
 const InventorySchema = require('../../Schemas/Inventory-Schema');
-const Emojis = require('../../Resources/Emojis.json').Emojis;
+const Emojis = require('../../Resources/Emojis.json');
 const Capitalize = require('../../Resources/capitalize').Capitalize
+const itemsemoji = require('../../Resources/EconomyItems');
+
 module.exports = {
     name: 'inventory' ,
     aliases: ['inventario', 'inv'],
@@ -12,10 +14,9 @@ module.exports = {
     owner: false,
     async execute(Client, msg, args, Discord) {
 
-    const SleepyInv = Client.emojis.cache.get(Emojis.SleepyInv);
-    const SleepyEmoji = Client.emojis.cache.get(Emojis.SleepyCoin);
+    const SleepyInv = Client.emojis.cache.get(Emojis.Economy.SleepyInv);
+    const SleepyEmoji = Client.emojis.cache.get(Emojis.Emojis.SleepyCoin);
     const member = msg.mentions.members.first() || msg.member;
-
     InventorySchema.findOne(
         {
             id: member.id,
@@ -35,8 +36,10 @@ module.exports = {
                     }) 
                     Object.entries(items).forEach(([name, quantity]) => {
                         if(name === 'PlaceHolder') return undefined;
-                        embed.addField(`✨${Capitalize(name)}:`, `**${quantity}**`) 
+                        if(quantity >= 1) return embed.addField(`✅${Capitalize(name)}:`, `**${quantity}** `, true) 
+                        embed.addField(`❌${Capitalize(name)}:`, `**${quantity}** `, true) 
                       })    
+
             return msg.channel.send({embeds:[embed]})  
         })
     }

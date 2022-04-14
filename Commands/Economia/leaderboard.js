@@ -17,7 +17,7 @@ module.exports = {
     let i = 0 
     let h = 0
     let globaldata = await InventorySchema.find({}).sort(mysort)
-    
+    let leaderboardlenght = parseInt(globaldata.length) 
     //Dar fix!
     if(globaldata.length >= 9)  leaderboardlenght = 9
     if(globaldata.length < 9) leaderboardlenght = parseInt(globaldata.length) 
@@ -40,7 +40,9 @@ module.exports = {
          })} 
       h++;
     }
-
+    if(leaderboardlenght === 0){ 
+      embed.addField(`Não existem registos`, `😭`)  
+      embed.setImage(`https://art.pixilart.com/thumb/0a3e0d6b60c551e.png`) }
     return msg.channel.send({embeds:[embed]});
   }
 }

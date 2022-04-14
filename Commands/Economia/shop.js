@@ -22,7 +22,7 @@ module.exports = {
             iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})
              })
          items.forEach((items) =>{
-            embed.addField(`✨${items.item}${Client.emojis.cache.get(items.emoji)}`, `Preço: \`${items.price}\` ${SleepyEmoji}, Chance:\`${items.pct}\``)
+            embed.addField(`${Client.emojis.cache.get(items.emoji)}${items.item}`, `Preço: \`${items.price}\` ${SleepyEmoji}, Chance:\`${items.pct}%\``)
         })   
         return msg.channel.send({embeds:[embed]}) 
     }
