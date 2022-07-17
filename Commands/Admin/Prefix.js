@@ -5,11 +5,11 @@ const mongoose = require('mongoose')
 mongoose.set('useFindAndModify', false);
 
 module.exports = {
-    name: 'prefix' ,
-    aliases: ['pre', 'prefixo'],
+    name: 'prefixo' ,
+    aliases: ['pre', 'prefix'],
     permissions: ['ADMINISTRATOR', 'MANAGE_GUILD'],
     cooldown: 5,
-    description: `Muda o prefixo do servidor 😴`,
+    description: `Muda o prefixo que é utilizado no servidor 😴`,
     async execute(Client, msg, args, Discord) {
 
 

@@ -15,5 +15,5 @@ module.exports = (msg, Discord, command, Client) => {
         })
         .setTimestamp()
 
-    return msg.reply({ embeds: [embed] })
+    return msg.channel.send({ embeds: [embed] }).then(msg.delete());
 }

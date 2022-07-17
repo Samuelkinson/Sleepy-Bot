@@ -3,12 +3,12 @@ module.exports = (Discord, Client ) =>{
   console.log(`Logged in has ${Client.user.tag}!`); 
   
       const arrayOfStatus = [
-         `Over ${Client.guilds.cache.size} trash servers`,
-         `The game of Sleep`,
-         `To Lilia saying Sleepyyyy Time!`,
-         `You making bad decisions`,
+         `${Client.guilds.cache.size} servidores`,
+         `O jogo do sono`,
+         `Lilia a dizer "Sleepyyyy Time!"`,
+         `eevee ep seeds`,
      ];
-     const arrayOfTypes = ['WATCHING','PLAYING','LISTENING','WATCHING'];
+     const arrayOfTypes = ['WATCHING','PLAYING','LISTENING','LISTENING'];
      let i = 0
 
      setInterval(() =>{

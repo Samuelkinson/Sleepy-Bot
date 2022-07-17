@@ -1,70 +1,23 @@
 
 module.exports = (Client, msg, args, Discord) =>{
 
-        var replys1 = [
-            "💎 : 💎 : 💎 ",
-            "🍋 : 🍋 : 🍋 ",
-            "7️ : 7️ : 7️ ",
-            "🔔 : 🔔 : 🔔",
-            "🍒 : 🍒 : 🍒 ",
-            "⭐ : ⭐ : ⭐ ",
-            "💎 : ⭐ : 7️ ", 
-            "⭐ : 🔔 : 🔔",
-            "⭐ : ⭐ : 🍒 ",
-            "💎 : 💎 : 🍒",
-            "💎 : 7️ : 7️ ",
-            "⭐ : 🔔 : 🍋 ",
-            "⭐ : ⭐ : 🍒 ",
-            "7️ : ⭐ : ⭐ ",
-            "⭐ : ⭐ : 7️ ",
-            "💎 : 💎 : 7️ "
-        ];
-        
-        var replys2 = [
-            "💎 : 💎 : 💎 ",
-            "🍋 : 🍋 : 🍋 ",
-            "7️ : 7️ : 7️ ",
-            "🔔 : 🔔 : 🔔",
-            "🍒 : 🍒 : 🍒 ",
-            "💎 : ⭐ : 7️ ",
-            "⭐ : 🔔 : 🔔",
-            "⭐ : ⭐ : 🍒 ",
-            "💎 : 💎 : 🍒",
-            "💎 : 7️ : 7️ ",
-            "⭐ : 🔔 : 🍋 ",
-            "⭐ : ⭐ : 🍒 ",
-            "7️ : ⭐ : ⭐ ",
-            "⭐ : ⭐ : 7️ ",
-            "💎 : 💎 : 7️ ",
-            "💎 : 🍒 : 🍒",
-            "💎 : 🔔 : ⭐"
-        ];
-        
-        var replys3 = [
-            "🍋 : 🍋 : 🍋 ",
-            "🔔 : 🔔 : 🔔",
-            "🍒 : 🍒 : 🍒 ",
-            "⭐ : ⭐ : ⭐ ",
-            "💎 : ⭐ : 7️ ",
-            "⭐ : 🔔 : 🔔",
-            "⭐ : ⭐ : 🍒 ",
-            "💎 : 💎 : 🍒",
-            "💎 : 7️ : 7️ ",
-            "⭐ : 🔔 : 🍋 ",
-            "⭐ : ⭐ : 🍒 ",
-            "7️ : ⭐ : ⭐ ",
-            "⭐ : ⭐ : 7️ ",
-            "💎 : 💎 : 7️ "
-        ];
-
-        let reponse = (replys1[Math.floor(Math.random() * replys1.length)])
-        let reponse2 = (replys2[Math.floor(Math.random() * replys2.length)])
-        let reponse3 = (replys3[Math.floor(Math.random() * replys3.length)])
+        var randomemoji = ["💎", "🍋", "🔔", "🍒", "⭐", "7️"]
+        let reponse = (randomemoji[Math.floor(Math.random() * randomemoji.length)])
+        let reponse2 = (randomemoji[Math.floor(Math.random() * randomemoji.length)])
+        let reponse3 = (randomemoji[Math.floor(Math.random() * randomemoji.length)])
+        let reponse4 = (randomemoji[Math.floor(Math.random() * randomemoji.length)])
+        let reponse5 = (randomemoji[Math.floor(Math.random() * randomemoji.length)])
+        let reponse6 = (randomemoji[Math.floor(Math.random() * randomemoji.length)])
+        let reponse7 = (randomemoji[Math.floor(Math.random() * randomemoji.length)])
+        let reponse8 = (randomemoji[Math.floor(Math.random() * randomemoji.length)])
+        let reponse9 = (randomemoji[Math.floor(Math.random() * randomemoji.length)])
 
 	    const embed = new Discord.MessageEmbed()
 	        .setColor("#ff748c")
 	        .setDescription(`**[ 🎰 ${msg.member} quer jogar slots! 🎰 ]**`)
-	        .addField(`${reponse} \n \n${reponse2}**<** \n \n${reponse3}`, `** **`)
+	        .addField(`${reponse} ${reponse2} ${reponse3} `, `** **`)
+            .addField(`${reponse4} ${reponse5} ${reponse6}**<** `, `** **`)
+            .addField(`${reponse7} ${reponse8} ${reponse9}`, `** **`)
             .setFooter({
                 text:`Comando Patrocinado por @SleepyBot 😴`, 
                 iconURL: Client.user.displayAvatarURL({dynamic: true, format :'png'})

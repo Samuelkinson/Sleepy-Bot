@@ -21,7 +21,7 @@ module.exports = {
         weatherembed(Client, msg, args, Discord, response);
       })
       .catch((err) => {
-        msg.channel.send(`Enter a vailid city name`);
+        msg.channel.send(`Introduz um local válido!`);
       });
   },
 };

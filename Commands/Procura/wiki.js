@@ -26,7 +26,7 @@ module.exports = {
         standardembed(Client, msg, args, Discord, summary);
       }
     } catch (error) {
-      return msg.channel.send(`Couldn't find ${query}`);
+      return msg.channel.send(`Não consegui encontrar ${query}`);
     }
   },
 };

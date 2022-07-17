@@ -1,9 +1,9 @@
 module.exports = {
-    name: 'nickname' ,
-    aliases: [],
-    permissions: [],
+    name: 'apelido' ,
+    aliases: ['nickname', 'nick'],
+    permissions: ['ADMINISTRATOR'],
     cooldown: 0,
-    description: 'Nickname @SleepyBot "O melhor bot"',
+    description: 'Muda o nick de um utilizador😴',
 
     async execute(Client, msg, args, Discord) {
         

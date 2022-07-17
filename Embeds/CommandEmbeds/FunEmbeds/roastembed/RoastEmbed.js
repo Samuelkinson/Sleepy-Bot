@@ -8,7 +8,7 @@ module.exports = (Discord, Client, mentionedMember, msg) =>{
            
             let roastEmbed = new Discord.MessageEmbed()
             .setTitle(`\`${mentionedMember.username}\` vai ser humilhado`)
-            .setColor('#cc6600')
+            .setColor('#ff748c')
             .setDescription(json.insult)
             .setFooter({
                 text:`Comando Patrocinado por @SleepyBot 😴`, 

@@ -42,7 +42,7 @@
 
 
 ## 💤Introdução
-Sleepy Bot foi criado com <code>Discord.js</code> e <code>Javascript</code> e ainda está em desenvolvimento [precoce](https://twitter.com/duxdessa)! 
+Sleepy Bot foi criado com <code>Discord.js</code> e <code>Javascript</code> e ainda está em desenvolvimento! 
 
 Este projeto começou como um projeto final da escola conhecido por PAP e como uma maneira divertida de aprender Javascript. 
 
@@ -96,9 +96,6 @@ Dentro da <code>config.json</code> na pasta default você encontrará <code>conf
 ## 👤Autores
 👤 **Samuelkinson**, **BranksFakes**, **Nóbrega**
 
-* Twitter: [@nerfsleepysam](https://twitter.com/nerfsleepysam)
-* Twitter: [@pescadordcaxias](https://twitter.com/pescadordcaxias)
-* Twitter: [@MontadorO](https://twitter.com/MontadorO)
 * Github: [@Samuelkinson](https://github.com/Samuelkinson)
 
 ## 📝Licença

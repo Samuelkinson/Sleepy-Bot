@@ -5,11 +5,13 @@ module.exports = (Client, msg, args, Discord, getStatData, UR_L) => {
 
     request(UR_L, function(err, resp, body){
         $ = cheerio.load(body);
+        console.log(getStatData(0, $))
+        console.log(getStatData(2, $))
 
         var KD = getStatData(0, $);
          if(KD == -1){
             return msg.channel.send(`Inválido, certifique-se de que o seu perfil não é privado e de que digitas-te um ID ou STEAMID64 válido! (https://steamid.io/lookup/${args}) `);
-        } 
+        }   
 
         var KILLS = getStatData(1, $);
         var WIN = getStatData(2, $);

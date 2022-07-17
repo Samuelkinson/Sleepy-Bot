@@ -8,16 +8,15 @@ const HelpPagination = require("../../Embeds/Help/HelpPagination");
 const HelpAdmin = require("../../Embeds/Help/HelpAdmin");
 const HelpFun = require("../../Embeds/Help/HelpFun");
 const HelpUtility = require("../../Embeds/Help/HelpUtility");
-const HelpVoice = require("../../Embeds/Help/HelpVoice");
 const HelpSearch = require("../../Embeds/Help/HelpSearch");
 const EconomySearch = require("../../Embeds/Help/HelpEconomy");
 
 module.exports = {
-  name: "help",
-  aliases: ["socorro", "h", "ebook", "ajuda"],
+  name: "ajuda",
+  aliases: ["socorro", "h", "ebook", "help"],
   permissions: ["SEND_MESSAGES"],
   cooldown: 0,
-  description: `Comando de ajuda | ${DefaultPrefix}help [Commando] ou [Categoria] `,
+  description: `Comando de ajuda | ${DefaultPrefix}help [Commando] ou [Categoria]😴 `,
   premium: false,
   premiumguild: false,
   owner: false,
@@ -28,16 +27,16 @@ module.exports = {
     else Prefix = DefaultPrefix;
 
     let categories = [];
-    // Turns Folders in Commands to categories and gets every command inside the folder
+    //Transforma o diretorio de comandos em categorias e "pega" todos os comandos dentro do diretorio
     fs.readdirSync("./commands/").forEach((dir) => {
       const commands = fs
         .readdirSync(`./commands/${dir}`)
         .filter((file) => file.endsWith(".js"));
       const cmds = commands.map((command) => {
-        let file = require(`../../Commands/${dir}/${command}`); // Gets the file
-        if (!file.name) return "Não existe esse comando!"; // If the command doesn't have a name, it will return this message
+        let file = require(`../../Commands/${dir}/${command}`); //Pega o comando.js
+        if (!file.name) return "Não existe esse comando!"; // Se não existir o comando, retorna um "Não comando"
 
-        let name = file.name.replace(".js", ""); // Gets the name of every command
+        let name = file.name.replace(".js", ""); //Pega o nome do comando e remove o .js
         return `\`${name}\``;
       });
       let data = new Object();
@@ -50,24 +49,22 @@ module.exports = {
       categories.push(data);
     });
 
-    if (args.length > 1) return Nocommand(msg, Discord, Client, Prefix);
     if (!args[0]) {
-      HelpPagination(Discord, Client, msg, categories, Prefix);
+      HelpPagination(Discord, Client, msg, categories, Prefix);  //Sem argumentos, mostra o embed default
     } else {
       const cmd = args[0].toLowerCase();
       const command =
         Client.commands.get(cmd) ||
         Client.commands.find((a) => a.aliases && a.aliases.includes(cmd));
         console.log(command);
-      if (command) return CommandInfo(msg, Discord, command, Client);
-      if (cmd === "admin" || cmd === "a" || cmd === "1") return HelpAdmin(Discord, Client, msg, categories, Prefix);
-      else if (cmd === "diversão" || cmd === "d" || cmd === "2") return HelpFun(Discord, Client, msg, categories, Prefix);
-      else if (cmd === "utilidade" || cmd === "u" || cmd === "3") return HelpUtility(Discord, Client, msg, categories, Prefix);
-      else if (cmd === "voz" || cmd === "v" || cmd === "4") return HelpVoice(Discord, Client, msg, categories, Prefix);
-      else if (cmd === "procura" || cmd === "p" || cmd === "5") return HelpSearch(Discord, Client, msg, categories, Prefix);
-      else if (cmd === "economia" || cmd === "e" || cmd === "6") return EconomySearch(Discord, Client, msg, categories, Prefix);
+      if (command) return CommandInfo(msg, Discord, command, Client); //Se existir o comando, mostra a informação do comando
+      if (cmd === "admin" || cmd === "a" || cmd === "1") return HelpAdmin(Discord, Client, msg, categories, Prefix); //Se for admin, mostra o embed de admin
+      else if (cmd === "diversão" || cmd === "diversao" || cmd === "d" || cmd === "2") return HelpFun(Discord, Client, msg, categories, Prefix); //Se for diversão, mostra o embed de diversão
+      else if (cmd === "utilidade" || cmd === "u" || cmd === "3") return HelpUtility(Discord, Client, msg, categories, Prefix);//Se for utilidade, mostra o embed de utilidade
+      else if (cmd === "procura" || cmd === "p" || cmd === "4") return HelpSearch(Discord, Client, msg, categories, Prefix);//Se for procura, mostra o embed de procura
+      else if (cmd === "economia" || cmd === "e" || cmd === "5") return EconomySearch(Discord, Client, msg, categories, Prefix);//Se for economia, mostra o embed de economia
 
-      if (!command) return Nocommand(msg, Discord, Client, Prefix);
+      if (!command) return Nocommand(msg, Discord, Client, Prefix);//Se não existir o comando, mostra o embed de não comando
     }
   },
 };

@@ -10,9 +10,6 @@ const GuildSchema = mongoose.Schema({
     GuildID: RequiredString,
     guildName: RequiredString,
     prefix:String,
-    WelcomeChannelId: String,
-    GoodbyeChannelId: String,
 })
 
-
-module.exports = mongoose.model('Guild-Schema', GuildSchema)
+module.exports = mongoose.model('Guild-Schema', GuildSchema) 

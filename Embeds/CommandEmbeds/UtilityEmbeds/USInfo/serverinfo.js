@@ -7,7 +7,7 @@ module.exports = (Client, msg, args, Discord, guild) => {
 
     guild.fetchOwner().then(guildinfo =>{
         const embed = new Discord.MessageEmbed()
-        .setColor('BLACK')
+        .setColor('#a35ecc')
         .setTitle('Server Info')
         .setThumbnail(`${icon}`)
         .addFields(

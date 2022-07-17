@@ -1,8 +1,8 @@
 const schema = require('../../Schemas/Command-Schema')
 
 module.exports = {
-    name: 'enable' ,
-    aliases: [],
+    name: 'ativar-comando' ,
+    aliases: ['enable', 'ativar', 'enable-command'],
     permissions: ['ADMINISTRATOR'],
     cooldown: 0,
     description: 'Ativa comandos😴',

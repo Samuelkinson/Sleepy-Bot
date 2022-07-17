@@ -1,9 +1,9 @@
 module.exports = {
-  name: "poll",
-  aliases: [],
+  name: "votacao",
+  aliases: ['poll'],
   permissions: [],
   cooldown: 5,
-  description: "Starts a poll",
+  description: "Começa uma votação😴",
   premium: false,
   premiumguild: false,
   owner: false,
@@ -14,7 +14,7 @@ module.exports = {
       return msg.reply({ content: `Preciso que escrevas algo!` });
 
     const embed = new Discord.MessageEmbed()
-      .setColor("#ffc0cb")
+      .setColor("#a35ecc")
       .setTitle(`Poll`)
       .setDescription(theDescription)
       .setFooter(

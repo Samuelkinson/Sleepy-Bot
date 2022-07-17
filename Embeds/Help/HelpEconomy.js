@@ -14,7 +14,7 @@ module.exports = async (Discord, Client, msg, categories, Prefix) => {
         .setTitle('Comandos de economia')
         .setThumbnail(Client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 }))
         .addField(`💰**${categories[2].name}**`, categories[2].value)
-        .addField(`Atalhos` ,`${Prefix}h "a" or "6"` )
+        .addField(`Atalhos` ,`${Prefix}h "a" or "5"` )
         .setFooter({
             text:`Para mais info usa ${Prefix}help <Comando>`
         })

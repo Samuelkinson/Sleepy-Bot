@@ -21,7 +21,7 @@ module.exports = async (Client, msg, args, Discord, user) => {
         "birrelis é vida",
         "VAPO VAPO VAPO",
         "Rapilukz é um bot",
-        "Rogério o cão drogado ñ vai meter a ronda",
+        "Rogério o cão é lindo",
         "JOJO",
         "Miau miau",
         "Never gonna give you up!",
@@ -52,7 +52,6 @@ module.exports = async (Client, msg, args, Discord, user) => {
     'Eu sou um Weeb',
     'Birrelis é vida Birrelis é tudo',
     'Roger.io é bué lindo',
-    'teu pai é bué trouxa batia bue pungo a ver o programa do gouxa',
     ]
 
     const msglist2 = [
@@ -64,7 +63,6 @@ module.exports = async (Client, msg, args, Discord, user) => {
     'Adoro videos do Tiagovski',
     'Como crescer cabelo',
     'Estou Calvo',
-    'teu pai pensa que eu nao vi batia bue pungo a ver tvi',
     ]
 
     const msglist3 = [
@@ -121,6 +119,7 @@ module.exports = async (Client, msg, args, Discord, user) => {
     //Most used Messages Embed
         let embedmsglist = new Discord.MessageEmbed()
         .setTitle(`Mensagens mais usadas de **${hacked.username}**:`)
+        .setColor('#ff748c')
         .setThumbnail(member.user.displayAvatarURL({dynamic: true, size: 512}))
         .addFields(
             {name: `🥇`, value: `${messagelist1}`, inline: false},

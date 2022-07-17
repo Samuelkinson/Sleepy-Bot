@@ -1,4 +1,4 @@
-//Goes to pokeapi and gets the pokemon information.
+//Vai pokeapi e pega os dados de todos os pokemons
 const fetch = require('node-fetch');
 
 module.exports = {

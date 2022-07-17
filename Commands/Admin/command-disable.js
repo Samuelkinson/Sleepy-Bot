@@ -1,8 +1,8 @@
 const schema = require('../../Schemas/Command-Schema')
 
 module.exports = {
-    name: 'disable' ,
-    aliases: [],
+    name: 'desativar-comando' ,
+    aliases: ['disable', 'desativar'],
     permissions: ['ADMINISTRATOR'],
     cooldown: 0,
     description: `Desativa comandos😴`,
@@ -20,7 +20,7 @@ module.exports = {
             } else {
                 data = new schema({
                     Guild: msg.guild.id,
-                    Cmds: cmd
+                    Cmds: cmd,
                 })
             }
             await data.save();

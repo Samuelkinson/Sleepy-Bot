@@ -9,6 +9,7 @@ const PremiumGuildSchema = require('../../Schemas/Premium-Guild-Schema');
 
 const cooldowns = new Map();
 module.exports = async (Discord, Client, msg) =>{
+    //Declaração de prefixo
     let prefix;
     
     let data = await GuildSchema.findOne({
@@ -19,43 +20,43 @@ module.exports = async (Discord, Client, msg) =>{
     }else{
         prefix = data.prefix
     }
-    // Checks if the message starts with the Prefix
+    // Verifica se a mensagem foi enviado com o prefixo.
     if ((!msg.content.toLowerCase().startsWith(prefix)) || (msg.author.bot) || (!msg.guild)) return
     const args = msg.content.slice(prefix.length).trim().split(/ +/);
     const cmd = args.shift().toLowerCase();
 
-    //Get commands from Commands folder
+    //Encontra o comando na pasta de comandos 
     const command = Client.commands.get(cmd) || Client.commands.find(a => a.aliases && a.aliases.includes(cmd))
 
-    // Invalid Command handler
+    // Verifica se o comando existe
     if(!command) return CommandNotFound(msg, Discord, Client, prefix)
     
-    //Cooldown System
+    //Sistema de cooldown
     if(!cooldowns.has(command.name)){
         cooldowns.set(command.name, new Discord.Collection());
     }
 
     const current_time = Date.now();
-    const time_stamps = cooldowns.get(command.name);  //Get the cooldown time from the command
-    const cooldown_amount = (command.cooldown) * 1000; //Cooldown amount in ms
+    const time_stamps = cooldowns.get(command.name);  // Pega o tempo de cooldown do comando
+    const cooldown_amount = (command.cooldown) * 1000; //Tempo de cooldown  para transformar em segundos 
 
-    if(time_stamps.has(msg.author.id)){
+    if(time_stamps.has(msg.author.id)){ // Verifica se o usuário já está no cooldown
         const expiration_time = time_stamps.get(msg.author.id) + cooldown_amount;
 
         if(current_time < expiration_time){
             const time_left = (expiration_time - current_time) / 1000; 
 
-            // Sends Cooldown Embed
+            // Envia o embed de cooldown
             return CooldownEmbed(msg, time_left, command, Discord)
         }
     }
-
+    // Adiciona o usuário ao cooldown
     time_stamps.set(msg.author.id, current_time);
     setTimeout(() => time_stamps.delete(msg.author.id), cooldown_amount);
     
 
-    // Permissions System  
-    const validPermissions = [  //Array of premissions
+    // Sistema de premições   
+    const validPermissions = [  //Array de permissões 
         "CREATE_INSTANT_INVITE",
         "KICK_MEMBERS",
         "BAN_MEMBERS",
@@ -103,10 +104,10 @@ module.exports = async (Discord, Client, msg) =>{
             return msg.channel.send({ content: `Não tens permissões`})
         }
     }
-    //Checks if Premium
+    //Verifica se é Premium
     if(command.premium && !(await PremiumSchema.findOne({User: msg.author.id}))) return msg.channel.send('Não és premium!')
 
-    //Checks if Premium Guild Id
+    //Verifica se é Premium Guild Id
     if(command.premiumguild && !(await PremiumGuildSchema.findOne({Guild: msg.guild.id}, async(err, data) => {
         if(!data) return msg.channel.send(`Precisas de Premium Guild!`);
         if(!data.Permanent && Date.now()> data.Expire){
@@ -115,11 +116,10 @@ module.exports = async (Discord, Client, msg) =>{
         } 
     }))) return 
 
-    //Checks if Owner
+    //Verifica se é Owner
     if(command.owner && !(await OwnerSchema.findOne({User: msg.author.id}))) return msg.channel.send('Não és owner!')
-    //Executes Valid Command
+    //Executa o comando válido
     if(command) {
-        
         const check = await CommandSchema.findOne({ Guild: msg.guild.id, Cmds: cmd })
         if(check){
         if(check.Cmds.includes(command.name)) return msg.channel.send('Comando desativado')

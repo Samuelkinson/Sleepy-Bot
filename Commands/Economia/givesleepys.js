@@ -6,7 +6,7 @@ module.exports = {
   aliases: [],
   permissions: [],
   cooldown: 0,
-  description: `Dorme para ganhar Sleepy's 😴`,
+  description: `Oferece Sleepy's 😴`,
   premium: false,
   premiumguild: false,
   owner: false,
