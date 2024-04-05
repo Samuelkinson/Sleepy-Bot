@@ -3,7 +3,7 @@ module.exports = {
   aliases: ["convida", "convite"],
   permissions: ["CREATE_INSTANT_INVITE", "EMBED_LINKS", "SEND_MESSAGES"],
   cooldown: 120,
-  description: "Creates an invite for the server",
+  description: "Cria um convite para o servidor😴",
   premium: false,
   premiumguild: false,
   owner: false,

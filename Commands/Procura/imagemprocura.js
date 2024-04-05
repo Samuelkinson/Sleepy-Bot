@@ -8,7 +8,7 @@ const google = new Scraper({
 
 module.exports = {
   name: "searchimage",
-  aliases: ["foundpic", "pic", "searchpic"],
+  aliases: ["foundpic", "pic", "searchpic", "foto", "imagem"],
   permissions: [],
   cooldown: [],
   description: "Procura uma imagem toda linda😴",

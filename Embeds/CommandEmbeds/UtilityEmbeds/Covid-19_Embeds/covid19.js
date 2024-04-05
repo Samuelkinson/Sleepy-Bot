@@ -3,7 +3,7 @@ function formatNumber(num) {
 }
 
 module.exports = (Discord, msg,  c, country, flag  ) =>{
- 
+    console.log(c.cases)
     let embed = new Discord.MessageEmbed()
     .setTitle(`${flag ? flag : "\:earth_americas:"} ${country}`)
 	.setDescription("Estatísticas do país") 

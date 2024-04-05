@@ -1,4 +1,4 @@
-const SleepyCoinsSchema = require("../../Schemas/SleepyCoins-Shema");
+const SleepyCoinsSchema = require("../../Schemas/Inventory-Schema");
 const Emojis = require('../../Resources/Emojis.json').Emojis;
 module.exports = {
   name: "remove",

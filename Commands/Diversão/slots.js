@@ -2,7 +2,7 @@ const slots = require("../../Embeds/CommandEmbeds/FunEmbeds/slotsembed");
 
 module.exports = {
   name: "slots",
-  aliases: [],
+  aliases: ['roleta'],
   permissions: [],
   cooldown: 0,
   description: "Joga slots😴",

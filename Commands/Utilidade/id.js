@@ -3,7 +3,7 @@ module.exports = {
   aliases: ["userid"],
   permissions: [],
   cooldown: 0,
-  description: "",
+  description: "Diz o id do utizador😴",
   premium: false,
   premiumguild: false,
   owner: false,

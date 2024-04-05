@@ -3,7 +3,7 @@ module.exports = {
   aliases: ["sicon"],
   permissions: [],
   cooldown: 0,
-  description: "",
+  description: "Mostra o icone do servidor 😴",
   premium: false,
   premiumguild: false,
   owner: false,

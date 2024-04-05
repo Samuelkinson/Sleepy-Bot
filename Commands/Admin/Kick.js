@@ -1,7 +1,7 @@
 const Prefix  = require('../../config.json').prefix
 module.exports = {
-    name: 'kick' ,
-    aliases: ['expulsa', 'k'],
+    name: 'expulsar' ,
+    aliases: ['expulsa', 'k', 'kick'],
     permissions: ['ADMINISTRATOR', 'KICK_MEMBERS',],
     cooldown: 0,
     description: `Kick a uma pessoa do servidor😴`,

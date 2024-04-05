@@ -1,15 +1,14 @@
 const fs = require('fs')
 
 module.exports = (Client, Discord) =>{
+    //Lê o diretório de eventos e importa os eventos para o bot
     const load_dir = (dirs) =>{
         const event_files = fs.readdirSync(`./Events/${dirs}`).filter(file => file.endsWith('.js'))
-
         for(const file of event_files){
             const event = require(`../Events/${dirs}/${file}`);
             const event_name = file.split('.')[0];
             Client.on(event_name, event.bind(null, Discord, Client))
         }
     }
-
     ['Client', 'Guild'].forEach(e => load_dir(e));
 }

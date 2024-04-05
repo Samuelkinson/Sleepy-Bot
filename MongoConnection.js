@@ -7,7 +7,7 @@ module.exports = async () =>{
         useCreateIndex: true, 
         useUnifiedTopology: true
       }).then(res=>{
-        console.log("SleepBot na Database")
+        console.log("SleepyBot na Base de dados")
       }).catch(err => {
         console.log(Error, err.message);
   })

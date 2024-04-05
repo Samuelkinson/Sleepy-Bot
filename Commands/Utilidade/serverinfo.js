@@ -5,7 +5,7 @@ module.exports = {
   aliases: ["serverinfo", "si", "sinfo", "si"],
   permissions: ["ADMINISTRATOR"],
   cooldown: 0,
-  description: "Shows User Info About A User or Pinged User",
+  description: "Mostra informações do servidor 😴",
   premium: false,
   premiumguild: false,
   owner: false,

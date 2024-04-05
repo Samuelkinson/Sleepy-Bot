@@ -6,7 +6,7 @@ module.exports = {
   aliases: ['traduz'],
   permissions: [],
   cooldown: 0,
-  description: `Traduz todas as linguagens`,
+  description: `Traduz todas as linguagens😴`,
   premium: false,
   premiumguild: false,
   owner: false,
@@ -14,7 +14,7 @@ module.exports = {
     try {
       if (args.length < 2) {
         msg.reply(
-          `Formato errado: Um exemplo seria ${Prefix}tt korean "texto-em-qualquer-idioma"` 
+          `Formato errado: Um exemplo seria "${Prefix}tt korean "texto-em-qualquer-idioma"` 
         );
       } else {
         let translateTo = args[0].toLowerCase(); //Language to Translate to
@@ -29,7 +29,7 @@ module.exports = {
           });
       }
     } catch (err) {
-      return msg.channel.send({content: `Tenta ${Prefix}tt korean "any-language-text"`});
+      return msg.channel.send({content: `Tenta "${Prefix}tt korean "texto-em-qualquer-idioma"`});
     }
   },
 };

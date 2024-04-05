@@ -1,8 +1,8 @@
 const flip = require("flip-text");
 
 module.exports = {
-  name: "fliptext",
-  aliases: ["fliptexto"],
+  name: "invertetexto",
+  aliases: ["fliptext"],
   permissions: [],
   cooldown: 0,
   description: "Inverte o texto😴",

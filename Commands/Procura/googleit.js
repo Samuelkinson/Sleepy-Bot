@@ -2,7 +2,7 @@ const googleIt = require("google-it");
 
 module.exports = {
   name: "google",
-  aliases: ["git", "googleit"],
+  aliases: ["git", "googleit", "procura-google"],
   permissions: [],
   cooldown: 0,
   description: "Não sabes? Pergunta ao google! 😴",

@@ -1,7 +1,7 @@
 const Prefix = require("../../Config.json").prefix;
 
 module.exports = {
-  name: "echo",
+  name: "repete",
   aliases: ["say", 'diz'],
   permissions: [],
   cooldown: 5,

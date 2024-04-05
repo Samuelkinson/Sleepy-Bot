@@ -8,8 +8,8 @@ module.exports = async (Discord, Client, msg, categories, Prefix) => {
     else Prefix = DefaultPrefix
 
     let HelpUtility = new Discord.MessageEmbed()
-        .setColor('ORANGE')
-        .setTitle('Comandos de Utility do SleepyBot')
+        .setColor('#a35ecc')
+        .setTitle('Comandos de Utility')
         .setThumbnail(Client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 }))
         .addField(`❓` + categories[5].name, categories[5].value)
         .addField(`Atalhos` ,`${Prefix}h "u" or "3"` )

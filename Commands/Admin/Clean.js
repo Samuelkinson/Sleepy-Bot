@@ -1,6 +1,6 @@
 module.exports = {
-    name: 'clean',
-    aliases:['limpa', 'l', 'c', 'purge', 'clear','p'],
+    name: 'limpar',
+    aliases:['limpa', 'l', 'c', 'purge', 'clear','p', 'clean'],
     cooldown: 0,
     permissions:['ADMINISTRATOR','MANAGE_MESSAGES'],
     description: `Limpa as mensagens do canal selecionado😴`,

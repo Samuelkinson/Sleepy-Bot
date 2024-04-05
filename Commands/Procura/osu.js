@@ -22,7 +22,7 @@ module.exports = {
       osuembed(Client, msg, Discord, osuUser);
     } catch (error) {
       console.log(error);
-      return msg.channel.send("Player not found");
+      return msg.channel.send("Jogador não encontrado!");
     }
   },
 };

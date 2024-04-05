@@ -13,7 +13,7 @@ module.exports = async (Discord, Client, msg, categories, Prefix) => {
         .setTitle('Comandos de procura')
         .setThumbnail(Client.user.displayAvatarURL({ dynamic: true, format: 'png', size: 1024 }))
         .addField(`🔎**${categories[4].name}**`, categories[4].value)
-        .addField(`Atalhos` ,`${Prefix}h "s" or "5"` )
+        .addField(`Atalhos` ,`${Prefix}h "s" or "4"` )
         .setFooter({
             text:`Para mais info usa ${Prefix}help <Comando>`
         })

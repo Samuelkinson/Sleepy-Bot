@@ -6,7 +6,7 @@ module.exports = {
   aliases: [],
   permissions: [],
   cooldown: 0,
-  description: "Diz o Uptime do SleepyBot",
+  description: "Diz o Uptime do SleepyBot😴",
   premium: false,
   premiumguild: false,
   owner: false,
@@ -17,7 +17,7 @@ module.exports = {
     let embed = new Discord.MessageEmbed()
       .setTitle("⏱Uptime")
       .setDescription(`${duration}`)
-      .setColor("#ffc0cb");
+      .setColor("#a35ecc");
 
     return msg.channel.send({ embeds: [embed] }).then(msg.delete());
   },

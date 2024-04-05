@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 module.exports = (Client, Discord) =>{
-    // Read Commands Folder and import new commands into the bot
+    //Lê o diretório de comandos e importa os comandos para o bot
     const commandFolders = fs.readdirSync('./Commands')
 
     for(const folder of commandFolders){

@@ -3,15 +3,6 @@
   <a href="https://chooseaLicença.com/Licenças/gpl-2.0/" target="_blank">
     <img alt="Licença: GPL--2.0 Licença " src="https://img.shields.io/badge/Licença-GPL--2.0 Licença -yellow.svg" />
   </a>
-  <a href="https://twitter.com/nerfsleepysam" target="_blank">
-    <img alt="Twitter: nerfsleepysam" src="https://img.shields.io/twitter/follow/nerfsleepysam.svg?style=social" />
-  </a>
-  <a href="https://twitter.com/pescadordcaxias" target="_blank">
-    <img alt="Twitter: pescadordcaxias" src="https://img.shields.io/twitter/follow/pescadordcaxias.svg?style=social" />
-  </a>
-  <a href="https://twitter.com/MontadorO" target="_blank">
-    <img alt="Twitter: MontadorO" src="https://img.shields.io/twitter/follow/MontadorO.svg?style=social" />
-  </a>
 </p>
 
 <h1 align="center"> Sleepy Bot </h1> <br>
@@ -42,13 +33,13 @@
 
 
 ## 💤Introdução
-Sleepy Bot foi criado com <code>Discord.js</code> e <code>Javascript</code> e ainda está em desenvolvimento [precoce](https://twitter.com/duxdessa)! 
+Sleepy Bot foi criado com <code>Discord.js</code> e <code>Javascript</code> e ainda está em desenvolvimento! 
 
-Este projeto começou como um projeto final da escola conhecido por PAP e como uma maneira divertida de aprender Javascript. 
+Este projeto foi desenvolvido no âmbito da [PAP](https://www.forum.pt/ensino-profissional/pap-prova-o-que-vales) e uma maneira de desenvolver conhecimentos em Javascript. 
 
-Sleepy Bot é um bot de discord open source que está constantemente a receber atualizações.
+Sleepy Bot é um bot de discord open source  <s>querecebe atualizações</s>.
 
-* Você pode me convidar para o seu Discord Server por este [link](https://discord.com/api/oauth2/authorize?client_id=863936621656932372&permissions=8&scope=bot).
+* Podes me conviar para o teu Discord por este [link](https://discord.com/api/oauth2/authorize?client_id=863936621656932372&permissions=8&scope=bot).
  
 * Se gostas-te deste repositório, sente-te à vontade para deixar uma estrela ⭐ para ajudar a promover o Sleepy Bot😴💤!! 
 
@@ -66,39 +57,36 @@ Sleepy Bot é um bot de discord open source que está constantemente a receber a
 
 ## 👩‍💻Instalação
 
-> Para executar este bot, você precisará dos seguintes programas: 
+> Para executar este bot, vais precisar dos seguintes programas: 
 
 * [Node.js](https://nodejs.org/en/) v16+
 * [Discord.js](https://discord.js.org/#/) v13+
 * [MongoDB](https://www.mongodb.com)
 
->Importante: Certifique-se de que o bot tem o escopo do aplicativo <code>applications.commands</code> habilitado, que pode ser encontrado em OAuth2 toque no portal do desenvolvedor. 
+>Importante: Certifica-te que o bot tem o escopo do aplicativo <code>applications.commands</code> habilitado, que pode ser encontrado em OAuth2 no portal do desenvolvedor. 
 
-Corre <code>npm install</code> no diretório do bot e certifique-se que não recebe erros. 
+Corre <code>npm install</code> no diretório do bot e certifica-te que não recebes erros. 
 
  Cria um <code>.env</code> arquivo com os seguintes segredos: 
  * <code>Token</code>  <i>**Discord Bot**</i>
  * <code>Token DB_CONNECT</code> <i>**MongoDB Connection String**</i>
 
-Dentro da <code>config.json</code> na pasta default você encontrará <code>config.json</code> do bot [prefix](https://twitter.com/nerfsleepysam/status/1487151670245085184) assim como as <code>keys</code>.
-* <code>[Weather](https://openweathermap.org/api)</code> 
-* <code>[Covid-19](https://rapidapi.com/api-sports/api/covid-193)</code>
-* <code>[Osu!](https://osu.ppy.sh/p/api)</code>
-* <code>[Faceit](https://developers.faceit.com/docs/auth/api-keys)</code>
-<br>Os nomes dos campos dentro da DB estão de acordo com os esquemas dentro da pasta <code>Schemas</code> desta forma você não precisa configurar nada dentro do mongo além da string de conexão. 
-<br>No final, execute npm start e aproveite o Sleepy Bot😴💤! 
+Vais ter de criar uma <code>config.json</code> é adicionar um prefix assim como as <code>[keys](https://imgbox.com/9ojXSkPv)</code>.
+* <code>["weatherkey":](https://openweathermap.org/api)</code> 
+* <code>["covidapikey":](https://rapidapi.com/api-sports/api/covid-193)</code>
+* <code>["osuapikey":](https://osu.ppy.sh/p/api)</code>
+* <code>["faceitapikey":](https://developers.faceit.com/docs/auth/api-keys)</code>
+<br>Os nomes dos campos dentro da DB estão de acordo com os esquemas dentro da pasta <code>Schemas</code> desta forma não precisas configurar nada dentro do mongo além da string de conexão. 
+<br>No final, "execute npm start" e aproveita o Sleepy Bot😴💤! 
 
  
 ## 💬Feedback
 
-* Sinta-se à vontade para nos enviar feedback no [Discord](https://discord.gg/C9rzzCpYzT), <i><b>Samuelkinson#7887</b></i>, <i><b>el_chapo#9485</b></i>, <i><b>Nóbrega#1753</b></i>.
+* Versão que não vai levar melhorias.
 
 ## 👤Autores
 👤 **Samuelkinson**, **BranksFakes**, **Nóbrega**
 
-* Twitter: [@nerfsleepysam](https://twitter.com/nerfsleepysam)
-* Twitter: [@pescadordcaxias](https://twitter.com/pescadordcaxias)
-* Twitter: [@MontadorO](https://twitter.com/MontadorO)
 * Github: [@Samuelkinson](https://github.com/Samuelkinson)
 
 ## 📝Licença

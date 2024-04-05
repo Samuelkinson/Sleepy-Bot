@@ -54,7 +54,7 @@ module.exports = {
 
             covid19(Discord, msg, c, country, flag); //COVID-19 Country Embed
           } else {
-            msg.channel.send(`Couldn't find that country`);
+            msg.channel.send(`Não encontrei esse país!`);
           }
         })
         .catch(function (error) {
