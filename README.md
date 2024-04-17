@@ -92,7 +92,7 @@ Vais ter de criar uma <code>config.json</code> é adicionar um prefix assim como
 ## 📝Licença
 
 Copyright © 2022 [Samuelkinson](https://github.com/Samuelkinson).<br />
-This project is [GPL--2.0 License ](https://chooseaLicença.com/Licenças/gpl-2.0/) License.
+This project uses [GPL--2.0 License ](https://chooseaLicença.com/Licenças/gpl-2.0/) License.
 
 ## 🤖Agradecimentos 
 
